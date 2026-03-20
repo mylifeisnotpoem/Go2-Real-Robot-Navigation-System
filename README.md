@@ -1,35 +1,6 @@
 # Go2-Real-Robot-Navigation-System
 ROS1 建图导航流程
 
-首先配置相关网络（对于9045）
-
-1. 连接狗子的wifi，这个ip是通过网线连接狗内路由的
-ssh wheeltec@192.168.168.50   密码：dongguan
-给狗子连接wifi，如已经连接可跳过：sudo nmcli dev wifi connect "WL-OFFICE" password "wlwl1102"
-
-ifconfig   找到公司路由分配的IP 记住这个IP
-
-2.连接公司wifi，，
-ssh wheeltec@192.168.10.xxx    密码：dongguan
-
-
-3. 若是网络ip变动，解决方案：
-nmcli connection show #列出所有的网络配置，找到不对的地方
-
-wheeltec@wheeltec:~$ nmcli connection show 
-NAME UUID TYPE DEVICE 
-Wi-Fi connection 1 
-435bc051-93a1-4a8f-b22b-8920240e9be7 
-wifi 
-wlP1p1s0 
-
-sudo nmcli connection down "Wi-Fi connection 1"
-sudo nmcli connection up "WL-OFFICE"
-
-
-
-启动（这一步导航时再做，会抢占遥控器的控制权）
-
 1. 启动底层运控 ws_ros2
 cd ./ws_ros2/ws_robot_control
 source ./install/setup.bash
