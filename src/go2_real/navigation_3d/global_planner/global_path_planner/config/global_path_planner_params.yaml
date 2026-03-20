@@ -1,0 +1,38 @@
+# 全局路径规划器参数配置文件
+
+# 基本参数
+topology_map_file: "/home/server/WS_ROS1/ws_pcl_map/src/topology_rviz_plugin/map/topology_map.txt"
+global_frame: "map"
+robot_frame: "base_link"
+odom_topic: "/Odometry"
+
+# 路径规划参数
+connection_distance_threshold: 5.0       # 连接距离阈值（米）
+interpolation_points: 20                 # 插值点数量
+enable_direct_connection: true           # 启用直接连接
+direct_connection_threshold: 50.0         # 直接连接距离阈值（米）
+
+# 可行性检查参数
+enable_feasibility_check: true           # 启用可行性检查
+free_space_radius: 1.0                   # 自由空间半径（米）
+edge_proximity_threshold: 0.8            # 边邻近阈值（米）
+line_of_sight_resolution: 0.2            # 视线检查分辨率（米）
+
+# 边合法性检查参数（基于可行域点云）
+robot_height: 0.35                       # 机器人高度（米）
+edge_sample_count: 100                   # 边采样点数量
+safety_sphere_radius: 0.3                # 安全球半径（米）
+valid_point_threshold: 0.9               # 有效点阈值（百分比）
+free_space_topic: "/free_space_cloud"    # 可行域点云话题
+
+# 临时连接可行域检查控制（重要新功能）
+enable_temp_connection_feasibility_check: false  # 是否对临时连接启用可行域检查
+# 说明：
+#   - true:  启用对临时节点连接的严格可行域检查，路径更安全但可能过于保守
+#   - false: 禁用临时节点连接的可行域检查，依赖距离和基本几何检查，路径规划更灵活
+
+# 使用建议：
+# 1. 在复杂环境或安全要求高的场景中，建议设置为 true
+# 2. 在开放环境或需要更灵活路径规划的场景中，可以设置为 false
+# 3. 如果发现路径规划经常失败或过于保守，可以尝试设置为 false
+# 4. 如果发现规划的路径存在安全问题，建议设置为 true

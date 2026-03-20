@@ -1,0 +1,90 @@
+[ERROR] [1770118013.031614]: 服务初始化失败: node shutdown interrupted service call
+[INFO] [1770117959.601916]: 正在等待 hdl_global_localization 服务...
+shutdown request: [/auto_initialpose] Reason: new node registered with same name
+[INFO] [1770118013.038553]: 自动初始位姿节点已启动
+[INFO] [1770118013.042387]: 算法引擎: FPFH_RANSAC
+[INFO] [1770118013.046418]: 地图话题: /globalmap
+[INFO] [1770118013.064066]: 点云话题: /livox/pointcloud2
+[31m[hdl_global_localization-1] escalating to SIGTERM[0m
+... logging to /root/.ros/log/2c09c99e-1dd2-11b2-a568-3c6d66a331fd/roslaunch-robot-9045-2541.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/root/ws_nav/src/hdl_global_localization-master/launch/auto_initialpose.launch
+[1mstarted roslaunch server http://robot-9045:37053/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /auto_initialpose/auto_mode: False
+ * /auto_initialpose/cloud_topic: /livox/pointcloud2
+ * /auto_initialpose/engine: FPFH_RANSAC
+ * /auto_initialpose/localization_rate: 1.0
+ * /auto_initialpose/map_topic: /globalmap
+ * /auto_initialpose/max_candidates: 1
+ * /hdl_global_localization/bbs/map_height: 1024
+ * /hdl_global_localization/bbs/map_max_z: 2.4
+ * /hdl_global_localization/bbs/map_min_z: 2.0
+ * /hdl_global_localization/bbs/map_pyramid_level: 6
+ * /hdl_global_localization/bbs/map_resolution: 0.5
+ * /hdl_global_localization/bbs/map_width: 512
+ * /hdl_global_localization/bbs/max_points_per_cell: 5
+ * /hdl_global_localization/bbs/max_range: 15.0
+ * /hdl_global_localization/bbs/max_theta: 3.15
+ * /hdl_global_localization/bbs/max_tx: 50.0
+ * /hdl_global_localization/bbs/max_ty: 50.0
+ * /hdl_global_localization/bbs/min_theta: -3.15
+ * /hdl_global_localization/bbs/min_tx: -50.0
+ * /hdl_global_localization/bbs/min_ty: -50.0
+ * /hdl_global_localization/bbs/scan_max_z: 0.2
+ * /hdl_global_localization/bbs/scan_min_z: -0.2
+ * /hdl_global_localization/fpfh/normal_estimation_radius: 2.0
+ * /hdl_global_localization/fpfh/search_radius: 4.0
+ * /hdl_global_localization/global_localization_engine: BBS
+ * /hdl_global_localization/globalmap_downsample_resolution: 0.5
+ * /hdl_global_localization/query_downsample_resolution: 0.5
+ * /hdl_global_localization/ransac/correspondence_randomness: 2
+ * /hdl_global_localization/ransac/inlier_fraction: 0.25
+ * /hdl_global_localization/ransac/matching_budget: 10000
+ * /hdl_global_localization/ransac/max_correspondence_distance: 1.0
+ * /hdl_global_localization/ransac/max_iterations: 1000000
+ * /hdl_global_localization/ransac/pitch_max: 3.15
+ * /hdl_global_localization/ransac/pitch_min: -3.15
+ * /hdl_global_localization/ransac/roll_max: 3.15
+ * /hdl_global_localization/ransac/roll_min: -3.15
+ * /hdl_global_localization/ransac/similarity_threshold: 0.5
+ * /hdl_global_localization/ransac/voxel_based: True
+ * /hdl_global_localization/ransac/x_max: 10000.0
+ * /hdl_global_localization/ransac/x_min: -10000.0
+ * /hdl_global_localization/ransac/y_max: 10000.0
+ * /hdl_global_localization/ransac/y_min: -10000.0
+ * /hdl_global_localization/ransac/yaw_max: 3.15
+ * /hdl_global_localization/ransac/yaw_min: -3.15
+ * /hdl_global_localization/ransac/z_max: 10000.0
+ * /hdl_global_localization/ransac/z_min: -10000.0
+ * /hdl_global_localization/teaser/cbar2: 1.0
+ * /hdl_global_localization/teaser/cross_check: False
+ * /hdl_global_localization/teaser/noise_bound: 0.5
+ * /hdl_global_localization/teaser/rotation_cost_threshold: 0.005
+ * /hdl_global_localization/teaser/rotation_gnc_factor: 1.4
+ * /hdl_global_localization/teaser/rotation_max_iterations: 100
+ * /hdl_global_localization/teaser/tuple_scale: 0.95
+ * /hdl_global_localization/teaser/tuple_test: False
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+
+NODES
+  /
+    auto_initialpose (hdl_global_localization/auto_initialpose.py)
+    hdl_global_localization (hdl_global_localization/hdl_global_localization_node)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/root/ws_nav/src/hdl_global_localization-master/launch/auto_initialpose.launch http://localhost:11311
+[1mprocess[hdl_global_localization-1]: started with pid [2550][0m
+[1mprocess[auto_initialpose-2]: started with pid [2551][0m
+[auto_initialpose-2] killing on exit
+[hdl_global_localization-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

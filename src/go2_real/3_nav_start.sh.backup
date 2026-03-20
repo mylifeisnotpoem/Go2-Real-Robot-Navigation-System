@@ -1,0 +1,81 @@
+#!/bin/bash
+set -e
+export DISPLAY=:0
+echo "[START] Fast-LIO2 Navigation"
+
+PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+WORKSPACE_DIR="$( cd "${PROJECT_DIR}/../.." && pwd )"
+
+source "${WORKSPACE_DIR}/devel/setup.bash"
+
+PIDS=()
+
+cleanup() {
+    if [ ${#PIDS[@]} -gt 0 ]; then
+        echo "Stopping background nodes..."
+        kill "${PIDS[@]}" 2>/dev/null || true
+    fi
+}
+
+trap cleanup EXIT
+
+launch_bg() {
+    local name="$1"
+    shift
+    echo "Starting ${name}..."
+    "$@" > /dev/null 2>&1 &
+    PIDS+=($!)
+}
+
+launch_bg "robot navigation bringup" roslaunch go2_ros_control common_robot_nav.launch
+sleep 6
+
+# launch_bg "base robot bringup" roslaunch go2_ros_control common_robot.launch
+# sleep 3
+
+# 采集 Livox 点云并发布
+launch_bg "Livox point cloud" roslaunch livox2pointcloud livox2pointcloud.launch
+sleep 3
+# launch_bg "keyword detector" roslaunch sherpa_onnx_ros keywords.launch
+# sleep 1
+# launch_bg "goal loop" roslaunch sherpa_onnx_ros goal_loop_simple.launch
+# sleep 1
+
+# 将实时点云与已有地图配准实现全局定位
+launch_bg "3D localization" roslaunch open3d_loc localization_3d_go2.launch
+sleep 1
+# 把点云投影为 /scan（供局部代价图/规划使用）
+launch_bg "pointcloud to laserscan" roslaunch pointcloud_to_laserscan sample_node.launch
+sleep 1
+# launch_bg "local costmap" roslaunch costmap_2d local_costmap.launch
+# sleep 1
+launch_bg "local planner costmap" roslaunch local_planner costmap_2d.launch
+sleep 1
+launch_bg "path smoother" roslaunch path_smoother test_with_smoother.launch
+sleep 1
+launch_bg "pure pursuit" roslaunch pure_pursuit_local_planner pure_pursuit_local_planner.launch
+sleep 1
+launch_bg "dual radar extractor" roslaunch dual_radar_traversable_extractor dual_radar_extractor.launch
+sleep 3
+launch_bg "target points visualizer" roslaunch topology_rviz_plugin target_points_visualizer.launch
+sleep 1
+launch_bg "navigation state machine" roslaunch user_interface navigation_task_state_machine.launch
+sleep 1
+launch_bg "photograph service" roslaunch user_interface photograph.launch
+sleep 1
+
+# === 新增：启动 UDP cmd_vel 发送程序 ===
+# 使用绝对路径确保能找到文件，并在后台运行
+launch_bg "UDP cmd_vel sender" python3 "/root/ws_nav/src/go2_real/common/go2_drive/go2_ros_control/scripts/cmd_vel_udp.py"
+sleep 1
+# ====================================
+
+# if [ -x "${PROJECT_DIR}/run_ros_bridge.sh" ]; then
+#   launch_bg "ROS1<->ROS2 bridge" bash "${PROJECT_DIR}/run_ros_bridge.sh"
+#   sleep 1
+# else
+#   echo "Warning: ${PROJECT_DIR}/run_ros_bridge.sh not found or not executable, skipping bridge startup."
+# fi
+
+echo "All background nodes are up. Launching navigation GUI (foreground)..."
+python3 "${PROJECT_DIR}/common/user_interface/scripts/navigation_control_cli.py"

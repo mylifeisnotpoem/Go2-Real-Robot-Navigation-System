@@ -1,0 +1,43 @@
+<!-- 导航任务状态机启动文件 -->
+<launch>
+  <!-- 参数配置 -->
+  <arg name="task_folder_path" default="$(find user_interface)/config/task" 
+       doc="任务文件夹路径" />
+  <arg name="target_points_file" default="$(find user_interface)/config/generated_map_target_points.txt" 
+       doc="目标点文件路径" />
+  <arg name="state_machine_frequency" default="10.0" 
+       doc="状态机运行频率 (Hz)" />
+  <arg name="node_name" default="navigation_task_state_machine_node" 
+       doc="节点名称" />
+
+  <!-- 启动导航任务状态机节点 -->
+  <node pkg="user_interface"
+        type="navigation_task_state_machine_node"
+        name="$(arg node_name)"
+        output="screen">
+    
+    <!-- 节点参数 -->
+    <param name="task_folder_path" value="$(arg task_folder_path)" />
+    <param name="target_points_file" value="$(arg target_points_file)" />
+    <param name="state_machine_frequency" value="$(arg state_machine_frequency)" />
+    
+  </node>
+
+  <!-- 可选：启动话题监控 -->
+  <arg name="monitor_topics" default="false" doc="是否启动话题监控" />
+  
+  <group if="$(arg monitor_topics)">
+    <!-- 监控导航状态 -->
+    <node pkg="rostopic" type="rostopic" name="monitor_nav_state"
+          args="echo /nav_state" output="screen" />
+    
+    <!-- 监控任务动作 -->
+    <node pkg="rostopic" type="rostopic" name="monitor_task_action"
+          args="echo /task_action" output="screen" />
+    
+    <!-- 监控目标点 -->
+    <node pkg="rostopic" type="rostopic" name="monitor_target_points"
+          args="echo /target_points" output="screen" />
+  </group>
+
+</launch>

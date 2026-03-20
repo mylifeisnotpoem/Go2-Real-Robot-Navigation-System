@@ -1,0 +1,26 @@
+<!-- Node for merging magnetometer and accelerometer data into a single imu message -->
+<launch>
+  <param name="/use_sim_time" value="false" />
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="laser_to_ilivox_tf"
+    args="0 0 0 0 0 0 laser_link livox_frame" />
+
+  <node
+    pkg="nodelet" type="nodelet" name="imu_manager"
+    args="manager" output="screen" />
+
+  <node pkg="nodelet" type="nodelet"
+    name="ImuFilterNodelet"
+    args="load imu_filter_madgwick/ImuFilterNodelet imu_manager"
+    output="screen">
+
+    <param name="use_mag" value="false" />
+    <param name="publish_tf" value="false" />
+    <remap from="/imu/data_raw" to="/livox/imu" />
+
+  </node>
+  
+  <include file="$(find imu_orientation_converter)/launch/imu_orientation_converter.launch">
+  </include>
+
+</launch>

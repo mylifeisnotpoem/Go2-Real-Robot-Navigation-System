@@ -1,0 +1,63 @@
+Exception ignored in thread started by: <bound method XmlRpcNode.run of <rosgraph.xmlrpc.XmlRpcNode object at 0xffffa6ffb700>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 252, in run
+    self._run()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 321, in _run
+    self._run_init()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 271, in _run_init
+    self.server = ThreadingXMLRPCServer((bind_address, port), log_requests)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 149, in __init__
+    SimpleXMLRPCServer.__init__(self, addr, SilenceableXMLRPCRequestHandler, log_requests)
+  File "/usr/lib/python3.8/xmlrpc/server.py", line 605, in __init__
+    socketserver.TCPServer.__init__(self, addr, requestHandler, bind_and_activate)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+WARNING: disk usage in log directory [/root/.ros/log] is over 1GB.
+It's recommended that you use the 'rosclean' command.
+RLException: ERROR: could not contact master [http://localhost:11311]
+The traceback for the exception was written to the log file
+... logging to /root/.ros/log/319aa388-1dd2-11b2-800f-3c6d66b29e23/roslaunch-robot-9004-150597.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+
+started roslaunch server http://robot-9004:34985/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /cloud_publisher/downsample_leaf_size: 0.05
+ * /cloud_publisher/enable_downsampling: True
+ * /cloud_publisher/file_directory: /root/ws_nav/src/...
+ * /cloud_publisher/file_name: aft_pgo_free_space
+ * /cloud_publisher/frame_id: map
+ * /cloud_publisher/latch_publisher: True
+ * /global_path_planner/direct_connection_threshold: 5.0
+ * /global_path_planner/odom_topic: /baselink2map_kalman
+ * /global_path_planner/topology_map_file: /root/ws_nav/src/...
+ * /path_smoother/enable_point_filtering: True
+ * /path_smoother/enable_visualization: True
+ * /path_smoother/global_frame: map
+ * /path_smoother/max_deviation: 1.5
+ * /path_smoother/min_point_distance: 0.5
+ * /path_smoother/neighbor_radius: 1.0
+ * /path_smoother/smoothing_factor: 1.0
+ * /path_smoother/smoothing_iterations: 3
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /topology_map_file: /root/ws_nav/src/...
+ * /use_sim_time: False
+
+NODES
+  /
+    cloud_publisher (pcd_map/cloud_publisher)
+    global_path_planner (global_path_planner/global_path_planner_node)
+    path_smoother (path_smoother/path_smoother_node)
+
+auto-starting new master
+process[master]: started with pid [151724]
+ERROR: Unable to start XML-RPC server, port 11311 is already in use
+[master] killing on exit

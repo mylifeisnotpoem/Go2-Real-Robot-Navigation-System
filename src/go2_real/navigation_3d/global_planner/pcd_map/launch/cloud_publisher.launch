@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- 启动点云发布节点 -->
+  <node pkg="pcd_map" type="cloud_publisher" name="cloud_publisher" output="screen">
+    <!-- 点云文件路径设置 -->
+    <param name="file_directory" value="$(find pcd_map)/pcd/" />
+    <param name="file_name" value="aft_pgo_free_space" />
+    
+    <!-- 坐标系设置 -->
+    <param name="frame_id" value="map" />
+    
+    <!-- 发布频率 (Hz) -->
+    <param name="publish_rate" value="1.0" />
+    
+    <!-- 是否使用latch模式发布 (保持发布最后一条消息) -->
+    <param name="latch_publisher" value="true" />
+  </node>
+  
+  <!-- 启动RVIZ进行可视化 -->
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pcd_map)/rviz/cloud_view.rviz" /> -->
+</launch>

@@ -1,0 +1,112 @@
+# Pure Pursuit Local Planner Configuration
+# ==================== 基本控制参数 ====================
+# 是否启用A*局部重规划（默认关闭，直接跟踪全局路径）
+enable_local_replanning: true
+
+# 是否使用平滑后的路径（需要启用局部重规划）
+use_smoothed_path: true
+
+# Pure Pursuit parameters
+lookahead_distance_min: 0.4        # 最小前瞻距离 (m)
+lookahead_distance_max: 0.7        # 最大前瞻距离 (m)
+goal_tolerance: 0.3                # 目标点容忍距离 (m)
+
+# Speed parameters
+max_linear_velocity: 0.6           # 最大线速度 (m/s)
+max_linear_velocity_y: 0.3         # Y方向最大线速度 (m/s) - 全向机器人
+max_angular_velocity: 0.9          # 最大角速度 (rad/s)
+min_linear_velocity: 0.1           # 最小线速度 (m/s)
+acceleration_limit: 0.5            # 加速度限制 (m/s²)
+deceleration_limit: 0.8            # 减速度限制 (m/s²)
+
+# Local Path Planner Parameters (A* based)
+local_planning_frequency: 10.0      # 局部路径规划频率 (Hz)
+local_lookahead_distance: 1.0     # 局部规划前瞻距离 (m)
+local_min_lookahead_distance: 1.0 # 局部规划最小前瞻距离 (m)
+local_max_lookahead_distance: 3.0 # 局部规划最大前瞻距离 (m)
+
+# Dijkstra Planner Parameters (替换A*算法以避免贴边)
+dijkstra_obstacle_threshold: 10       # Dijkstra障碍物阈值 (0-100)
+dijkstra_allow_diagonal: true         # Dijkstra是否允许对角线移动
+dijkstra_diagonal_cost: 5.4         # Dijkstra对角线移动代价
+dijkstra_straight_cost: 5.0           # Dijkstra直线移动代价
+dijkstra_safety_margin: 2             # Dijkstra安全边距（栅格数，增大以避免贴边）
+dijkstra_path_deviation_weight: 0   # Dijkstra路径偏离权重（倾向于跟随全局路径）
+dijkstra_obstacle_avoidance_weight: 20.0  # Dijkstra障碍物避障权重（增强避障效果）
+
+# Obstacle avoidance parameters (replaced with Potential Field method)
+costmap_threshold: 50              # 代价地图阈值 (0-100)
+
+# Potential Field Obstacle Avoidance Parameters
+potential_field:
+  attractive_gain: 8.0            # 吸引力增益
+  repulsive_gain: 1.0             # 排斥力增益
+  influence_radius: 0.45            # 障碍物影响半径 (m)
+  safety_radius: 0.22               # 安全半径 (m)
+  force_limit: 10.0                # 最大力限制
+  angular_gain: 0.3                # 角速度调整增益
+  speed_factor_gain: 1.0           # 速度因子增益
+  # Y方向避障参数
+  y_force_threshold: 0.5           # Y方向力阈值，低于此值时Y速度为0
+  y_velocity_gain: 0.2             # Y方向速度增益
+  y_smoothing_factor: 0.3          # Y方向速度平滑因子 (0-1, 越小越平滑)
+  y_dead_zone: 0.05                # Y方向速度死区 (m/s)
+  
+  # 角速度调整参数  
+  angular_smoothing_factor: 0.4    # 角速度平滑因子 (0-1, 越小越平滑)
+  
+  # 双侧障碍物检测参数
+  bilateral_threshold: 0.8         # 双侧障碍物检测阈值
+  bilateral_damping: 0.1           # 双侧障碍物时的阻尼系数
+
+# Front Obstacle Detector Parameters (前方障碍物检测器)
+front_obstacle_detector:
+  # 检测形状选择: "rectangle" 或 "sector"
+  detection_shape: "sector"     # 检测形状 (rectangle=矩形, sector=扇形)
+  
+  # 矩形检测参数
+  detection_width: 0.3             # 矩形检测区域宽度 (m)
+  detection_length: 1.0            # 矩形检测区域长度 (m)
+  
+  # 扇形检测参数
+  sector_radius: 0.9               # 扇形半径 (m)
+  sector_angle: 60.0               # 扇形角度 (度，正负40度)
+  
+  # 通用参数
+  obstacle_threshold: 50           # 障碍物代价值阈值 (0-100)
+  linear_velocity_factor: 0.5      # 线速度衰减因子 (检测到障碍物时)
+  angular_velocity_factor: 6.0     # 角速度增强因子 (检测到障碍物时)
+  debug_mode: true                 # 调试模式开关
+  enable_visualization: true       # 启用可视化 (绿色=安全, 红色=有障碍物)
+
+# Dynamic Obstacle Avoidance Parameters (动态障碍物避障)
+dynamic_obstacle_avoidance:
+  enable_dynamic_obstacle_avoidance: true   # 是否启用动态障碍物避障功能
+  large_obstacle_failure_threshold: 3       # 大障碍物失败阈值（计数达到此值则停止）
+  recovery_check_duration: 5.0              # 恢复检测持续时间（检测不到大障碍物的时间，秒）
+  large_obstacle_reset_timeout: 30.0        # 大障碍物状态复位超时时间（防止不同地点障碍物累加，秒）
+
+# Near-goal obstacle safety stop
+near_goal_obstacle_stop_enable: true        # 近目标急停开关（仅在接近目标点时生效）
+near_goal_obstacle_stop_distance: 1.0       # 触发距离阈值 (m)
+
+# Control parameters
+control_frequency: 20.0            # 控制频率 (Hz)
+transform_tolerance: 0.1           # TF变换容忍时间 (s)
+
+# Frame IDs
+global_frame: "map"               # 全局坐标系
+robot_frame: "base_link"           # 机器人坐标系
+
+# Path tracker parameters
+curvature_smoothing_window: 3.0    # 曲率平滑窗口
+max_curvature: 2.0                 # 最大曲率 (1/m)
+
+# Topic names
+cmd_vel_topic: "/cmd_vel"          # 控制指令话题
+global_path_topic: "/global_path"  # 全局路径话题
+local_costmap_topic: "/local_costmap"  # 局部代价地图话题
+scan_topic: "/scan"                # 激光雷达话题
+
+yaw_tolerance: 0.5                # 目标点朝向容忍度 (rad)
+yaw_adjustment_gain: 1.5          # 朝向调整增益

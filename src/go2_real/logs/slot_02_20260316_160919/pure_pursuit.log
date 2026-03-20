@@ -1,0 +1,126 @@
+Exception ignored in thread started by: <bound method XmlRpcNode.run of <rosgraph.xmlrpc.XmlRpcNode object at 0xffff93cdc700>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 252, in run
+    self._run()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 321, in _run
+    self._run_init()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 271, in _run_init
+    self.server = ThreadingXMLRPCServer((bind_address, port), log_requests)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/xmlrpc.py", line 149, in __init__
+    SimpleXMLRPCServer.__init__(self, addr, SilenceableXMLRPCRequestHandler, log_requests)
+  File "/usr/lib/python3.8/xmlrpc/server.py", line 605, in __init__
+    socketserver.TCPServer.__init__(self, addr, requestHandler, bind_and_activate)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+WARNING: disk usage in log directory [/root/.ros/log] is over 1GB.
+It's recommended that you use the 'rosclean' command.
+RLException: ERROR: could not contact master [http://localhost:11311]
+The traceback for the exception was written to the log file
+... logging to /root/.ros/log/319aa388-1dd2-11b2-800f-3c6d66b29e23/roslaunch-robot-9004-150838.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+
+started roslaunch server http://robot-9004:37629/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /local_path_smoother/enable_point_filtering: True
+ * /local_path_smoother/enable_visualization: True
+ * /local_path_smoother/global_frame: map
+ * /local_path_smoother/max_deviation: 0.8
+ * /local_path_smoother/min_point_distance: 0.2
+ * /local_path_smoother/neighbor_radius: 0.5
+ * /local_path_smoother/smoothing_factor: 0.8
+ * /local_path_smoother/smoothing_iterations: 2
+ * /pure_pursuit_local_planner/acceleration_limit: 0.5
+ * /pure_pursuit_local_planner/cmd_vel_topic: /cmd_vel
+ * /pure_pursuit_local_planner/control_frequency: 20.0
+ * /pure_pursuit_local_planner/costmap_threshold: 50
+ * /pure_pursuit_local_planner/curvature_smoothing_window: 3.0
+ * /pure_pursuit_local_planner/deceleration_limit: 0.8
+ * /pure_pursuit_local_planner/dijkstra_allow_diagonal: True
+ * /pure_pursuit_local_planner/dijkstra_diagonal_cost: 5.4
+ * /pure_pursuit_local_planner/dijkstra_obstacle_avoidance_weight: 20.0
+ * /pure_pursuit_local_planner/dijkstra_obstacle_threshold: 10
+ * /pure_pursuit_local_planner/dijkstra_path_deviation_weight: 0
+ * /pure_pursuit_local_planner/dijkstra_safety_margin: 2
+ * /pure_pursuit_local_planner/dijkstra_straight_cost: 5.0
+ * /pure_pursuit_local_planner/dynamic_obstacle_avoidance/enable_dynamic_obstacle_avoidance: True
+ * /pure_pursuit_local_planner/dynamic_obstacle_avoidance/large_obstacle_failure_threshold: 3
+ * /pure_pursuit_local_planner/dynamic_obstacle_avoidance/large_obstacle_reset_timeout: 30.0
+ * /pure_pursuit_local_planner/dynamic_obstacle_avoidance/recovery_check_duration: 5.0
+ * /pure_pursuit_local_planner/enable_local_replanning: True
+ * /pure_pursuit_local_planner/front_obstacle_detector/angular_velocity_factor: 6.0
+ * /pure_pursuit_local_planner/front_obstacle_detector/debug_mode: True
+ * /pure_pursuit_local_planner/front_obstacle_detector/detection_length: 1.0
+ * /pure_pursuit_local_planner/front_obstacle_detector/detection_shape: sector
+ * /pure_pursuit_local_planner/front_obstacle_detector/detection_width: 0.3
+ * /pure_pursuit_local_planner/front_obstacle_detector/downstairs_detection_height_max: 1.5
+ * /pure_pursuit_local_planner/front_obstacle_detector/downstairs_detection_height_min: 0.05
+ * /pure_pursuit_local_planner/front_obstacle_detector/downstairs_detection_range: 1.5
+ * /pure_pursuit_local_planner/front_obstacle_detector/downstairs_detection_width: 0.8
+ * /pure_pursuit_local_planner/front_obstacle_detector/enable_visualization: True
+ * /pure_pursuit_local_planner/front_obstacle_detector/linear_velocity_factor: 0.5
+ * /pure_pursuit_local_planner/front_obstacle_detector/obstacle_threshold: 50
+ * /pure_pursuit_local_planner/front_obstacle_detector/sector_angle: 60.0
+ * /pure_pursuit_local_planner/front_obstacle_detector/sector_radius: 0.9
+ * /pure_pursuit_local_planner/front_obstacle_detector/stair_detection_height_max: 1.5
+ * /pure_pursuit_local_planner/front_obstacle_detector/stair_detection_height_min: 0.15
+ * /pure_pursuit_local_planner/front_obstacle_detector/stair_detection_range: 1.2
+ * /pure_pursuit_local_planner/front_obstacle_detector/stair_detection_width: 0.8
+ * /pure_pursuit_local_planner/front_obstacle_detector/stair_obstacle_point_threshold: 10
+ * /pure_pursuit_local_planner/global_frame: map
+ * /pure_pursuit_local_planner/global_path_topic: /global_path
+ * /pure_pursuit_local_planner/goal_tolerance: 0.3
+ * /pure_pursuit_local_planner/local_costmap_topic: /local_costmap
+ * /pure_pursuit_local_planner/local_lookahead_distance: 1.0
+ * /pure_pursuit_local_planner/local_max_lookahead_distance: 3.0
+ * /pure_pursuit_local_planner/local_min_lookahead_distance: 1.0
+ * /pure_pursuit_local_planner/local_planning_frequency: 10.0
+ * /pure_pursuit_local_planner/lookahead_distance_max: 0.7
+ * /pure_pursuit_local_planner/lookahead_distance_min: 0.4
+ * /pure_pursuit_local_planner/max_angular_velocity: 0.9
+ * /pure_pursuit_local_planner/max_curvature: 2.0
+ * /pure_pursuit_local_planner/max_linear_velocity: 0.6
+ * /pure_pursuit_local_planner/max_linear_velocity_y: 0.3
+ * /pure_pursuit_local_planner/min_linear_velocity: 0.1
+ * /pure_pursuit_local_planner/near_goal_obstacle_stop_distance: 1.0
+ * /pure_pursuit_local_planner/near_goal_obstacle_stop_enable: True
+ * /pure_pursuit_local_planner/potential_field/angular_gain: 0.3
+ * /pure_pursuit_local_planner/potential_field/angular_smoothing_factor: 0.4
+ * /pure_pursuit_local_planner/potential_field/attractive_gain: 8.0
+ * /pure_pursuit_local_planner/potential_field/bilateral_damping: 0.1
+ * /pure_pursuit_local_planner/potential_field/bilateral_threshold: 0.8
+ * /pure_pursuit_local_planner/potential_field/force_limit: 10.0
+ * /pure_pursuit_local_planner/potential_field/influence_radius: 0.45
+ * /pure_pursuit_local_planner/potential_field/repulsive_gain: 1.0
+ * /pure_pursuit_local_planner/potential_field/safety_radius: 0.22
+ * /pure_pursuit_local_planner/potential_field/speed_factor_gain: 1.0
+ * /pure_pursuit_local_planner/potential_field/y_dead_zone: 0.05
+ * /pure_pursuit_local_planner/potential_field/y_force_threshold: 0.5
+ * /pure_pursuit_local_planner/potential_field/y_smoothing_factor: 0.3
+ * /pure_pursuit_local_planner/potential_field/y_velocity_gain: 0.2
+ * /pure_pursuit_local_planner/robot_frame: base_link
+ * /pure_pursuit_local_planner/scan_topic: /scan
+ * /pure_pursuit_local_planner/transform_tolerance: 0.1
+ * /pure_pursuit_local_planner/use_smoothed_path: True
+ * /pure_pursuit_local_planner/yaw_adjustment_gain: 1.5
+ * /pure_pursuit_local_planner/yaw_tolerance: 0.5
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: False
+
+NODES
+  /
+    local_path_smoother (path_smoother/path_smoother_node)
+    pure_pursuit_local_planner (pure_pursuit_local_planner/pure_pursuit_local_planner_node)
+
+auto-starting new master
+process[master]: started with pid [151752]
+ERROR: Unable to start XML-RPC server, port 11311 is already in use
+[master] killing on exit

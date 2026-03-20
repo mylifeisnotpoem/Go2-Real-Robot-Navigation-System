@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- 启动点云发布节点 -->
+  <include file="$(find pcd_map)/launch/cloud_publisher.launch" />
+  <include file="$(find topology_rviz_plugin)/launch/target_points_visualizer.launch" />
+  
+  <!-- 启动RVIZ并配置拓扑工具 -->
+  <node pkg="rviz" type="rviz" name="rviz_topology" 
+        args="-d $(find topology_rviz_plugin)/rviz/topology_demo.rviz" 
+        output="screen" />
+        
+  <rosparam param="/rviz_topology/tool_manager/tool_plugins">
+    - topology_rviz_plugin/TopologyTool
+  </rosparam>
+</launch>

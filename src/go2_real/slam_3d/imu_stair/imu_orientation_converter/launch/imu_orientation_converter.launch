@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="/use_sim_time" value="false" />
+  <!-- Arguments for easy parameter configuration -->
+  <arg name="alpha" default="0.1" doc="Low-pass filter coefficient (0 &lt; alpha &lt; 1). Smaller = stronger filtering" />
+  <arg name="pitch_baseline" default="0.0" doc="Pitch baseline angle in degrees" />
+  <arg name="stairs_threshold" default="14.0" doc="Pitch deviation threshold for stairs detection in degrees" />
+  <arg name="imu_topic" default="/imu/data" doc="Input IMU topic name" />
+  <arg name="euler_topic" default="/imu/data_orientation" doc="Output Euler angles topic name" />
+  <arg name="pitch_deviation_topic" default="/imu/pitch_deviation" doc="Output pitch deviation topic name" />
+  <arg name="stairs_flag_topic" default="/stairs_flag" doc="Output stairs detection flag topic name" />
+  <arg name="stairs_scene_topic" default="/stairs_scene" doc="Output stairs scene topic name (1 up, -1 down, 0 flat)" />
+  <arg name="node_name" default="imu_orientation_converter" doc="Node name" />
+  <arg name="queue_size" default="10" doc="Subscriber and publisher queue size" />
+
+  <!-- IMU Orientation Converter Node -->
+  <node pkg="imu_orientation_converter" 
+        type="imu_orientation_converter_node" 
+        name="$(arg node_name)" 
+        output="screen">
+    
+    <!-- Topic remapping -->
+    <remap from="/imu/data" to="$(arg imu_topic)" />
+    <remap from="/imu/data_orientation" to="$(arg euler_topic)" />
+    <remap from="/imu/pitch_deviation" to="$(arg pitch_deviation_topic)" />
+    <remap from="/stairs_flag" to="$(arg stairs_flag_topic)" />
+    <remap from="/stairs_scene" to="$(arg stairs_scene_topic)" />
+    
+    <!-- Filter parameters -->
+    <param name="alpha" value="$(arg alpha)" type="double" />
+    
+    <!-- Detection parameters -->
+    <param name="pitch_baseline" value="$(arg pitch_baseline)" type="double" />
+    <param name="stairs_threshold" value="$(arg stairs_threshold)" type="double" />
+    
+    <!-- Communication parameters -->
+    <param name="queue_size" value="$(arg queue_size)" type="int" />
+    
+    <!-- Debug/logging parameters -->
+    <param name="verbose_logging" value="false" type="bool" />
+    
+  </node>
+  
+  <!-- Parameter validation and info -->
+  <node pkg="rosservice" type="rosservice" name="param_info" 
+        args="call --wait /$(arg node_name)/get_loggers" 
+        output="screen" 
+        if="false" />
+        
+</launch>

@@ -1,0 +1,3 @@
+[2026-03-16 17:13:25] rosservice call /auto_initialpose/trigger
+success: False
+message: "Map not loaded, cannot trigger localization"

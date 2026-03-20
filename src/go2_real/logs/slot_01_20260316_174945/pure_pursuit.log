@@ -1,0 +1,310 @@
+[WARN] [1773654634.066740986]: No global path received
+[WARN] [1773654635.066948324]: No global path received
+[WARN] [1773654636.116608769]: No global path received
+[WARN] [1773654637.166591499]: No global path received
+[WARN] [1773654638.166616654]: No global path received
+[WARN] [1773654639.166628848]: No global path received
+[WARN] [1773654640.216562136]: No global path received
+[WARN] [1773654641.218732844]: No global path received
+[WARN] [1773654642.266719402]: No global path received
+[WARN] [1773654643.266763534]: No global path received
+[WARN] [1773654644.320329119]: No global path received
+[WARN] [1773654645.366763516]: No global path received
+[WARN] [1773654646.416719971]: No global path received
+[INFO] [1773654633.709527535]: Near-goal obstacle stop config: enable=true, distance=1.00 m
+[INFO] [1773654633.796383341]: Potential Field Obstacle Avoidance module initialized
+[INFO] [1773654633.796447696]:   Attractive gain: 8.00
+[INFO] [1773654633.796460560]:   Repulsive gain: 1.00
+[INFO] [1773654633.796470672]:   Influence radius: 0.45 m
+[INFO] [1773654633.796478833]:   Safety radius: 0.22 m
+[INFO] [1773654633.796497681]:   Y force threshold: 0.50
+[INFO] [1773654633.796526803]:   Y smoothing factor: 0.30
+[INFO] [1773654633.796535859]:   Bilateral threshold: 0.80
+[INFO] [1773654633.809537760]: Path tracker initialized
+[INFO] [1773654633.876730644]: Dijkstra Planner initialized with optimized inflation handling
+[INFO] [1773654633.876800823]:   Obstacle threshold: 10.0
+[INFO] [1773654633.876816215]:   Safety margin: 2
+[INFO] [1773654633.876825880]:   Obstacle avoidance weight: 20.0
+[INFO] [1773654633.881220862]: Local Path Planner initialized with frequency: 10.0 Hz
+[INFO] [1773654633.881282369]: Local path planner (A* replanning) enabled
+[INFO] [1773654633.913498406]: Front Obstacle Detector initialized with parameters:
+[INFO] [1773654633.913641100]:   - Detection shape: Sector (radius: 0.90m, angle: 60.0??)
+[INFO] [1773654633.913663565]:   - Obstacle threshold: 50
+[INFO] [1773654633.913675021]:   - Large obstacle ratio: 0.50
+[INFO] [1773654633.913684653]:   - Linear velocity factor: 0.50
+[INFO] [1773654633.913700302]:   - Angular velocity factor: 6.00
+[INFO] [1773654633.913710126]:   - Near-goal occupancy check: radius=0.25m, ratio_threshold=0.20
+[INFO] [1773654633.913718831]:   - Visualization enabled: true
+[INFO] [1773654633.913731407]:   - Stair mode detection range: 1.20m, width: 0.80m
+[INFO] [1773654633.913741232]:   - Stair mode height filter: [0.15, 1.50]m, point threshold: 10
+[INFO] [1773654633.913754544]:   - Downstairs override range: 1.50m, width: 0.80m, height filter: [0.05, 1.50]m
+[INFO] [1773654634.016620365]: Pure Pursuit Local Planner initialized
+[INFO] [1773654634.016683183]: Pure Pursuit Local Planner initialized successfully
+[INFO] [1773654634.313923159]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654634.210 points(width=19968,height=1)
+[INFO] [1773654635.414771914]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654635.309 points(width=19968,height=1)
+[INFO] [1773654636.514081698]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654636.409 points(width=19968,height=1)
+[INFO] [1773654637.516037710]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654637.409 points(width=18912,height=1)
+[INFO] [1773654638.617513401]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654638.509 points(width=19680,height=1)
+[INFO] [1773654639.726148242]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654639.609 points(width=19968,height=1)
+[INFO] [1773654640.814699891]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654640.710 points(width=19968,height=1)
+[INFO] [1773654641.822233362]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654641.710 points(width=19968,height=1)
+[INFO] [1773654642.914565090]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654642.809 points(width=20064,height=1)
+[INFO] [1773654644.013202144]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654643.909 points(width=20160,height=1)
+[INFO] [1773654645.016452469]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654644.909 points(width=19968,height=1)
+[INFO] [1773654646.113632139]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654646.009 points(width=20064,height=1)
+[INFO] [1773654647.118268926]: [StairDebug][Cloud] Received cloud frame=laser_link st[WARN] [1773654647.419623811]: No global path received
+[WARN] [1773654648.466586232]: No global path received
+[WARN] [1773654649.466775508]: No global path received
+[WARN] [1773654650.516541394]: No global path received
+[WARN] [1773654651.516548037]: No global path received
+[WARN] [1773654652.519856664]: No global path received
+[WARN] [1773654653.566545344]: No global path received
+[WARN] [1773654654.566573493]: No global path received
+[WARN] [1773654655.616539356]: No global path received
+[WARN] [1773654656.616548271]: No global path received
+[WARN] [1773654657.666656157]: No global path received
+[WARN] [1773654658.716534144]: No global path received
+[WARN] [1773654659.716536531]: No global path received
+[WARN] [1773654660.719404529]: No global path received
+[WARN] [1773654661.719714003]: No global path received
+[WARN] [1773654662.766539777]: No global path received
+[WARN] [1773654663.766576214]: No global path received
+[WARN] [1773654664.816824299]: No global path received
+[WARN] [1773654665.866649643]: No global path received
+[WARN] [1773654666.866669887]: No global path received
+[WARN] [1773654667.867662978]: No global path received
+[WARN] [1773654668.916541940]: No global path received
+[WARN] [1773654669.966549438]: No global path received
+[WARN] [1773654670.966587218]: No global path received
+[WARN] [1773654672.016549945]: No global path received
+[WARN] [1773654673.066563202]: No global path received
+[WARN] [1773654674.116506568]: No global path received
+[WARN] [1773654675.119629779]: No global path received
+[WARN] [1773654676.166559111]: No global path received
+[WARN] [1773654677.166579259]: No global path received
+amp=1773654647.009 points(width=19968,height=1)
+[INFO] [1773654648.130698507]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654648.009 points(width=19680,height=1)
+[INFO] [1773654649.213801207]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654649.109 points(width=19968,height=1)
+[INFO] [1773654650.312844615]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654650.209 points(width=20064,height=1)
+[INFO] [1773654651.313354547]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654651.208 points(width=20160,height=1)
+[INFO] [1773654652.313703927]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654652.209 points(width=19968,height=1)
+[INFO] [1773654653.412508892]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654653.309 points(width=19968,height=1)
+[INFO] [1773654654.412839454]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654654.309 points(width=20064,height=1)
+[INFO] [1773654655.412961047]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654655.309 points(width=20064,height=1)
+[INFO] [1773654656.413195798]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654656.310 points(width=20448,height=1)
+[INFO] [1773654657.416560428]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654657.311 points(width=19968,height=1)
+[INFO] [1773654658.514205304]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654658.409 points(width=19968,height=1)
+[INFO] [1773654659.612738703]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654659.509 points(width=20064,height=1)
+[INFO] [1773654660.617265309]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654660.497 points(width=20832,height=1)
+[INFO] [1773654661.715056657]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654661.610 points(width=20736,height=1)
+[INFO] [1773654662.716676082]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654662.610 points(width=19968,height=1)
+[INFO] [1773654663.814006799]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654663.709 points(width=19968,height=1)
+[INFO] [1773654664.915601115]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654664.809 points(width=19968,height=1)
+[INFO] [1773654666.017963596]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654665.909 points(width=19776,height=1)
+[INFO] [1773654667.112591494]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654667.010 points(width=20064,height=1)
+[INFO] [1773654668.115201528]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654668.012 points(width=21984,height=1)
+[INFO] [1773654669.115644480]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654669.010 points(width=19968,height=1)
+[INFO] [1773654670.215170311]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654670.110 points(width=19968,height=1)
+[INFO] [1773654671.313078113]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654671.210 points(width=18912,height=1)
+[INFO] [1773654672.313967839]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654672.210 points(width=19968,height=1)
+[INFO] [1773654673.320841790]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654673.210 points(width=19968,height=1)
+[INFO] [1773654674.414836570]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654674.310 points(width=20064,height=1)
+[INFO] [1773654675.516089781]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654675.410 points(width=20064,height=1)
+[INFO] [1773654676.617268941]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654676.509 points(width=20352,height=1)
+[INFO] [1773654677.714430402]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=177[WARN] [1773654678.218755597]: No global path received
+[WARN] [1773654679.268369347]: No global path received
+[WARN] [1773654680.316541491]: No global path received
+[WARN] [1773654681.317674141]: No global path received
+[WARN] [1773654682.366568176]: No global path received
+[WARN] [1773654683.371603735]: No global path received
+[WARN] [1773654684.416647727]: No global path received
+[WARN] [1773654685.466578644]: No global path received
+[WARN] [1773654686.516542587]: No global path received
+[WARN] [1773654687.566525091]: No global path received
+[WARN] [1773654688.566561176]: No global path received
+[WARN] [1773654689.616764779]: No global path received
+[WARN] [1773654690.666532008]: No global path received
+[WARN] [1773654691.666601214]: No global path received
+[WARN] [1773654692.716570181]: No global path received
+[WARN] [1773654693.719752178]: No global path received
+[WARN] [1773654694.766622692]: No global path received
+[WARN] [1773654695.816528168]: No global path received
+[WARN] [1773654696.816551740]: No global path received
+[WARN] [1773654697.816577040]: No global path received
+[WARN] [1773654698.816601988]: No global path received
+[WARN] [1773654699.867232299]: No global path received
+[WARN] [1773654700.918688699]: No global path received
+[WARN] [1773654701.966560476]: No global path received
+[WARN] [1773654703.019843876]: No global path received
+[WARN] [1773654704.066572174]: No global path received
+[WARN] [1773654705.116592600]: No global path received
+[WARN] [1773654706.166483739]: No global path received
+[WARN] [1773654707.166518544]: No global path received
+[WARN] [1773654708.216910859]: No global path received
+3654677.612 points(width=19968,height=1)
+[INFO] [1773654678.817053279]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654678.710 points(width=20064,height=1)
+[INFO] [1773654679.917875973]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654679.810 points(width=20064,height=1)
+[INFO] [1773654681.022471298]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654680.910 points(width=19968,height=1)
+[INFO] [1773654682.113716665]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654682.010 points(width=19776,height=1)
+[INFO] [1773654683.113899797]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654683.009 points(width=20352,height=1)
+[INFO] [1773654684.115614427]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654684.010 points(width=19968,height=1)
+[INFO] [1773654685.214547717]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654685.110 points(width=20064,height=1)
+[INFO] [1773654686.312713963]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654686.209 points(width=19776,height=1)
+[INFO] [1773654687.313618122]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654687.210 points(width=19968,height=1)
+[INFO] [1773654688.414097567]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654688.310 points(width=20064,height=1)
+[INFO] [1773654689.512695866]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654689.410 points(width=19968,height=1)
+[INFO] [1773654690.613353560]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654690.510 points(width=20064,height=1)
+[INFO] [1773654691.615359820]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654691.512 points(width=19968,height=1)
+[INFO] [1773654692.713429805]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654692.610 points(width=20064,height=1)
+[INFO] [1773654693.720497399]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654693.610 points(width=20064,height=1)
+[INFO] [1773654694.814197604]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654694.710 points(width=19968,height=1)
+[INFO] [1773654695.912578196]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654695.810 points(width=19968,height=1)
+[INFO] [1773654697.013431228]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654696.910 points(width=19968,height=1)
+[INFO] [1773654698.014385629]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654697.909 points(width=20064,height=1)
+[INFO] [1773654699.112192945]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654699.010 points(width=19968,height=1)
+[INFO] [1773654700.123835576]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654700.009 points(width=19488,height=1)
+[INFO] [1773654701.212647928]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654701.110 points(width=20064,height=1)
+[INFO] [1773654702.312413804]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654702.210 points(width=19968,height=1)
+[INFO] [1773654703.315139650]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654703.211 points(width=19776,height=1)
+[INFO] [1773654704.412715596]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654704.310 points(width=19968,height=1)
+[INFO] [1773654705.511903747]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654705.410 points(width=19584,height=1)
+[INFO] [1773654706.513559270]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654706.410 points(width=19968,height=1)
+[INFO] [1773654707.513744610]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654707.410 points(width=20064,height=1)
+[INFO] [1773654708.614991837]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654708[WARN] [1773654709.216945792]: No global path received
+[WARN] [1773654710.266538065]: No global path received
+[WARN] [1773654711.316609580]: No global path received
+[WARN] [1773654712.366567856]: No global path received
+[WARN] [1773654713.417084003]: No global path received
+[WARN] [1773654714.466567753]: No global path received
+[WARN] [1773654715.466567602]: No global path received
+[WARN] [1773654716.516665779]: No global path received
+[WARN] [1773654717.566531850]: No global path received
+[WARN] [1773654718.566532402]: No global path received
+[WARN] [1773654719.619014908]: No global path received
+[WARN] [1773654720.666555884]: No global path received
+[WARN] [1773654721.666611384]: No global path received
+[WARN] [1773654722.719009982]: No global path received
+[WARN] [1773654723.766569167]: No global path received
+[WARN] [1773654724.816548203]: No global path received
+[WARN] [1773654725.816610006]: No global path received
+[WARN] [1773654726.819681702]: No global path received
+[WARN] [1773654727.866613628]: No global path received
+[WARN] [1773654728.917772331]: No global path received
+[WARN] [1773654729.966574611]: No global path received
+[WARN] [1773654730.966643583]: No global path received
+[WARN] [1773654732.016583737]: No global path received
+[WARN] [1773654733.016579457]: No global path received
+[WARN] [1773654734.066530716]: No global path received
+[WARN] [1773654735.066574727]: No global path received
+[WARN] [1773654736.120827934]: No global path received
+[WARN] [1773654737.166587360]: No global path received
+[WARN] [1773654738.216574012]: No global path received
+[WARN] [1773654739.216583013]: No global path received
+.510 points(width=19392,height=1)
+[INFO] [1773654709.616841001]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654709.509 points(width=19776,height=1)
+[INFO] [1773654710.712739283]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654710.610 points(width=19968,height=1)
+[INFO] [1773654711.815506592]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654711.709 points(width=19488,height=1)
+[INFO] [1773654712.913723595]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654712.809 points(width=20064,height=1)
+[INFO] [1773654713.913843417]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654713.809 points(width=19584,height=1)
+[INFO] [1773654714.916041571]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654714.796 points(width=22752,height=1)
+[INFO] [1773654716.013306651]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654715.910 points(width=19968,height=1)
+[INFO] [1773654717.031697675]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654716.912 points(width=19680,height=1)
+[INFO] [1773654718.113219696]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654718.010 points(width=19968,height=1)
+[INFO] [1773654719.212932148]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654719.110 points(width=19968,height=1)
+[INFO] [1773654720.213500053]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654720.110 points(width=19968,height=1)
+[INFO] [1773654721.318464832]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654721.210 points(width=19584,height=1)
+[INFO] [1773654722.413753185]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654722.310 points(width=20064,height=1)
+[INFO] [1773654723.513833173]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654723.410 points(width=17664,height=1)
+[INFO] [1773654724.614282808]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654724.509 points(width=20256,height=1)
+[INFO] [1773654725.614351300]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654725.512 points(width=20064,height=1)
+[INFO] [1773654726.614579959]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654726.510 points(width=19296,height=1)
+[INFO] [1773654727.712972385]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654727.610 points(width=19968,height=1)
+[INFO] [1773654728.719471559]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654728.610 points(width=19584,height=1)
+[INFO] [1773654729.813334762]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654729.710 points(width=19968,height=1)
+[INFO] [1773654730.814191928]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654730.709 points(width=20160,height=1)
+[INFO] [1773654731.814430028]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654731.710 points(width=20064,height=1)
+[INFO] [1773654732.914181553]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654732.811 points(width=20064,height=1)
+[INFO] [1773654734.013241176]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654733.910 points(width=19968,height=1)
+[INFO] [1773654735.113684347]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654735.011 points(width=19968,height=1)
+[INFO] [1773654736.122778387]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654736.010 points(width=20736,height=1)
+[INFO] [1773654737.212579876]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654737.114 points(width=19680,height=1)
+[INFO] [1773654738.312884897]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654738.210 points(width=20064,height=1)
+[INFO] [1773654739.313456099]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654739.220 po[WARN] [1773654740.219015129]: No global path received
+[WARN] [1773654741.266554889]: No global path received
+[WARN] [1773654742.266574131]: No global path received
+[WARN] [1773654743.316553295]: No global path received
+[WARN] [1773654744.367918023]: No global path received
+[WARN] [1773654745.417591541]: No global path received
+[WARN] [1773654746.466572997]: No global path received
+[WARN] [1773654747.516488062]: No global path received
+[WARN] [1773654748.519720469]: No global path received
+[WARN] [1773654749.566579143]: No global path received
+[WARN] [1773654750.616568707]: No global path received
+[WARN] [1773654751.666547199]: No global path received
+[WARN] [1773654752.666574889]: No global path received
+[WARN] [1773654753.716624008]: No global path received
+[WARN] [1773654754.766547297]: No global path received
+[WARN] [1773654755.816576607]: No global path received
+[WARN] [1773654756.816752143]: No global path received
+[WARN] [1773654757.816926432]: No global path received
+[WARN] [1773654758.866543531]: No global path received
+[WARN] [1773654759.866573613]: No global path received
+[WARN] [1773654760.919110224]: No global path received
+[WARN] [1773654761.966547921]: No global path received
+[WARN] [1773654762.966547884]: No global path received
+[WARN] [1773654764.016552239]: No global path received
+[WARN] [1773654765.066585460]: No global path received
+[WARN] [1773654766.116536373]: No global path received
+[WARN] [1773654767.116555312]: No global path received
+[WARN] [1773654768.116586093]: No global path received
+[WARN] [1773654769.166546126]: No global path received
+ints(width=20832,height=1)
+[INFO] [1773654740.413187112]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654740.310 points(width=19968,height=1)
+[INFO] [1773654741.413321910]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654741.310 points(width=20064,height=1)
+[INFO] [1773654742.512106993]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654742.410 points(width=19968,height=1)
+[INFO] [1773654743.513871272]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654743.409 points(width=20256,height=1)
+[INFO] [1773654744.611980389]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654744.510 points(width=19968,height=1)
+[INFO] [1773654745.613736859]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654745.506 points(width=20736,height=1)
+[INFO] [1773654746.632895181]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654746.510 points(width=19680,height=1)
+[INFO] [1773654747.712267539]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654747.610 points(width=19968,height=1)
+[INFO] [1773654748.719957710]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654748.609 points(width=19488,height=1)
+[INFO] [1773654749.817274728]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654749.710 points(width=19776,height=1)
+[INFO] [1773654750.913752478]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654750.810 points(width=19968,height=1)
+[INFO] [1773654752.012696031]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654751.909 points(width=19584,height=1)
+[INFO] [1773654753.013111802]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654752.910 points(width=19968,height=1)
+[INFO] [1773654754.013385871]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654753.910 points(width=19968,height=1)
+[INFO] [1773654755.113807986]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654755.009 points(width=20256,height=1)
+[INFO] [1773654756.212635951]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654756.110 points(width=19968,height=1)
+[INFO] [1773654757.216472544]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654757.094 points(width=22752,height=1)
+[INFO] [1773654758.316014396]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654758.211 points(width=20064,height=1)
+[INFO] [1773654759.412862810]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654759.310 points(width=19968,height=1)
+[INFO] [1773654760.414041314]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654760.309 points(width=20064,height=1)
+[INFO] [1773654761.512828799]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654761.410 points(width=19968,height=1)
+[INFO] [1773654762.613193847]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654762.510 points(width=19968,height=1)
+[INFO] [1773654763.712710703]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654763.609 points(width=19968,height=1)
+[INFO] [1773654764.813411316]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654764.710 points(width=19968,height=1)
+[INFO] [1773654765.813599959]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654765.710 points(width=20064,height=1)
+[INFO] [1773654766.912846053]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654766.809 points(width=19584,height=1)
+[INFO] [1773654768.012427039]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654767.910 points(width=20064,height=1)
+[INFO] [1773654769.113508947]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654769.009 points(width=20064,height=1)
+[INFO] [1773654770.212650621]: [StairDebug][Cloud] Received cloud frame=laser_link stamp=1773654770.111 points(wi[WARN] [1773654770.216498575]: No global path received
+[WARN] [1773654771.267655998]: No global path received
+[WARN] [1773654772.316648282]: No global path received
+[WARN] [1773654773.371574488]: No global path received
+[WARN] [1773654774.436858974]: No global path received
+[WARN] [1773654775.466583105]: No global path received
+[WARN] [1773654776.516805628]: No global path received
+[WARN] [1773654777.566590983]: No global path received
+[WARN] [1773654778.616551737]: No global path received
+[WARN] [1773654779.666544140]: No global path received
+[WARN] [1773654780.666573953]: No global path received
+[WARN] [1773654781.667112329]: No global path received
+[WARN] [1773654782.679614525]: No global path received
+[WARN] [1773654783.716551643]: No global path received
+[WARN] [1773654784.766551374]: No global path received
+[WARN] [1773654785.766541186]: No global path received
+[WARN] [1773654786.766566327]: No global path received
+[WARN] [1773654787.816545385]: No global path received
+[WARN] [1773654788.816558781]: No global path received
+[WARN] [1773654789.866551760]: No global path received
+[WARN] [1773654790.870013577]: No global path received

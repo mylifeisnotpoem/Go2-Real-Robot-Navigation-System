@@ -1,0 +1,33 @@
+<launch>
+  <!-- CostMap2D节点 -->
+  <node pkg="local_planner" type="costmap_2d_node_my" name="costmap_2d_node_my" output="screen">
+    
+    <!-- 坐标系参数 -->
+    <param name="global_frame" value="map" />
+    <param name="robot_base_frame" value="base_link" />
+    <param name="scan_topic" value="/scan" />
+    
+    <!-- 地图参数 -->
+    <param name="resolution" value="0.05" />  <!-- 5cm分辨率 -->
+    <param name="width" value="400" />        <!-- 400像素 = 20m @ 5cm -->
+    <param name="height" value="400" />       <!-- 400像素 = 20m @ 5cm -->
+    
+    <!-- 障碍物检测参数 -->
+    <param name="max_obstacle_range" value="10.0" />    <!-- 最大检测距离 10m -->
+    <param name="min_obstacle_range" value="0.05" />     <!-- 最小检测距离 0.1m -->
+    <param name="inflation_radius" value="0.34" />       <!-- 膨胀半径 0.5m -->
+    <remap from="/costmap" to="/local_costmap/costmap/costmap" />
+
+        <!-- 俯仰角检测参数 -->
+    <param name="enable_pitch_detection" value="true" />   <!-- 启用俯仰角检测 -->
+    <param name="max_pitch_angle" value="18.0" />          <!-- 最大俯仰角18度 -->
+    <param name="pitch_recovery_time" value="2.0" />       <!-- 俯仰角恢复等待时间2秒 -->
+  </node>
+
+  <!-- RViz可视化 (可选) -->
+  <!-- 在RViz中添加Map display，话题设置为 /costmap -->
+  <!-- 
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find local_planner)/config/costmap_visualization.rviz" />
+  -->
+
+</launch>

@@ -1,0 +1,28 @@
+<launch>
+<!-- Launch file for Livox MID360 LiDAR -->
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="map2odom"
+      args="0.290000 0.000000 0.100000 -0.000821 0.164250 0.004932 0.986406 map odom" /> -->
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="map2odom"
+      args="0 0 0 0 0 0 1 map odom" /> -->
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="laser2base"
+      args="-0.160000 0.000000 -0.060000 0 0 0 1 laser_link base_link" /> -->
+
+	<arg name="rviz" default="false" />
+
+	<rosparam command="load" file="$(find fast_lio_nav)/config/mid360_go2.yaml" />
+
+	<param name="feature_extract_enable" type="bool" value="0"/>
+	<param name="point_filter_num" type="int" value="3"/>
+	<param name="max_iteration" type="int" value="3" />
+	<param name="filter_size_surf" type="double" value="0.5" />
+	<param name="filter_size_map" type="double" value="0.5" />
+	<param name="cube_side_length" type="double" value="1000" />
+	<param name="runtime_pos_log_enable" type="bool" value="0" />
+    <node pkg="fast_lio_nav" type="fastlio_nav" name="fast_lio_node" output="screen" /> 
+	<param name="use_sim_time" value="false" />
+
+	<group if="$(arg rviz)">
+	<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find fast_lio_nav)/rviz_cfg/loam_livox.rviz" />
+	</group>
+
+</launch>

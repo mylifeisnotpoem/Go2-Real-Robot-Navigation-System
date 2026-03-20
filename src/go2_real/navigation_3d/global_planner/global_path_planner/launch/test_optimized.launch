@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 参数设置 -->
+    <param name="use_sim_time" value="false" />
+    
+    <!-- 拓扑地图文件路径 -->
+    <param name="topology_map_file" value="$(find topology_rviz_plugin)/map/generated_map.txt"/>
+    
+    <!-- 启动点云发布器（使用下采样减少数据量） -->
+    <node name="cloud_publisher" pkg="pcd_map" type="cloud_publisher" output="screen">
+        <param name="file_directory" value="$(find pcd_map)/pcd/"/>
+        <param name="file_name" value="aft_pgo_free_space"/>
+        <param name="frame_id" value="map"/>
+        <param name="enable_downsampling" value="true"/>
+        <param name="downsample_leaf_size" value="0.05"/>
+        <param name="latch_publisher" value="true"/>
+    </node>
+    
+    <!-- 启动全局路径规划器 -->
+    <node name="global_path_planner" pkg="global_path_planner" type="global_path_planner_node" output="screen">
+        <param name="topology_map_file" value="$(find topology_rviz_plugin)/map/connected_topology_map.txt"/>
+        <param name="odom_topic" value="/baselink2map_kalman"/>
+        <param name="direct_connection_threshold" value="5.0"/>
+    </node>
+    
+    <!-- 启动Python里程计模拟器 -->
+    <!-- <node name="odom_simulator" pkg="global_path_planner" type="simulate_odom.py" output="screen"/> -->
+    
+    <!-- 发布静态TF变换（map -> odom） -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom" 
+          args="0 0 0 0 0 0 map odom 100"/> -->
+    
+    <!-- 启动rviz（使用优化的配置） -->
+    <arg name="rviz" default="false"/>
+    <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" 
+          args="-d $(find global_path_planner)/config/rviz.rviz"/>
+    
+</launch>

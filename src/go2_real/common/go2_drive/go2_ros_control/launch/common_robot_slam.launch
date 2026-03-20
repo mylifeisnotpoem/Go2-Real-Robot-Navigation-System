@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- <include file="$(find livox2pointcloud)/launch/livox2pointcloud.launch" /> -->
+
+  <!-- 加载机器人描述 -->
+  <!-- <param name="robot_description" textfile="$(find go2_ros_control)/urdf/go2w_description.urdf" /> -->
+
+  <!-- 启动 robot_state_publisher -->
+  <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+    <param name="publish_frequency" type="double" value="10.0" />
+  </node> -->
+
+	<node pkg="tf2_ros" type="static_transform_publisher" name="imulink2baselink"
+      args="0.119 0 0 0 0 0 base_link laser_link" />
+
+  <!-- 启动 Go2底层驱动节点 -->
+  <!-- <node name="go2_ros_control" pkg="go2_ros_control" type="go2_driver_node.py" output="screen">
+  </node> -->
+
+  <!-- 启动雷达驱动 -->
+  <include file="$(find livox_ros_driver2)/launch_ROS1/msg_MID360.launch" />
+  <!-- <node pkg="go2_ros_control" type="go2_vel_controller_node" name="go2_vel_controller_node" output="screen">
+    <param name="interface" value="eth0" />
+  </node> -->
+  <!-- 启动 RViz -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find go2_ros_control)/config/go2.rviz" /> -->
+</launch> 

@@ -1,0 +1,67 @@
+[WARN] [1773651667.317021821]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.001557827s into the future.  Requested time 1773651667.071791410 but the latest data is at time 1773651667.070233583, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651670.204788385]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.005319119s into the future.  Requested time 1773651669.977434874 but the latest data is at time 1773651669.972115755, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651675.001524313]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.003488063s into the future.  Requested time 1773651674.774777412 but the latest data is at time 1773651674.771289349, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651680.010414863]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.001560688s into the future.  Requested time 1773651679.771464586 but the latest data is at time 1773651679.769903898, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651732.028489045]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.000792265s into the future.  Requested time 1773651731.771760464 but the latest data is at time 1773651731.770968199, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651732.129501876]: Transform failed: Lookup would require extrapolation 0.000792265s into the future.  Requested time 1773651731.771760464 but the latest data is at time 1773651731.770968199, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651732.129602134]: Failed to transform scan to global frame
+[WARN] [1773651733.106481505]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.094915628s into the future.  Requested time 1773651732.871923208 but the latest data is at time 1773651732.777007580, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651742.904602850]: Sensor position outside costmap bounds
+[WARN] [1773651745.205943653]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.001596450s into the future.  Requested time 1773651744.971918821 but the latest data is at time 1773651744.970322371, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651752.722823276]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.199768782s into the future.  Requested time 1773651752.371876240 but the latest data is at time 1773651752.172107458, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651752.824094002]: Transform failed: Lookup would require extrapolation 0.199768782s into the future.  Requested time 1773651752.371876240 but the latest data is at time 1773651752.172107458, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651752.824198197]: Failed to transform scan to global frame
+[WARN] [1773651753.025900809]: Transform failed: Lookup would require extrapolation 0.201767921s into the future.  Requested time 1773651752.471886158 but the latest data is at time 1773651752.270118237, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651753.227931239]: Transform failed: Lookup would require extrapolation 0.299708843s into the future.  Requested time 1773651752.671773195 but the latest data is at time 1773651752.372064352, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651753.430073032]: Transform failed: Lookup would require extrapolation 0.399733305s into the future.  Requested time 1773651752.871450424 but the latest data is at time 1773651752.471717119, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651753.632468176]: Transform failed: Lookup would require extrapolation 0.699949264s into the future.  Requested time 1773651753.271911621 but the latest data is at time 1773651752.571962357, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651753.733232808]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.606613398s into the future.  Requested time 1773651753.478022814 but the latest data is at time 1773651752.871409416, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651753.840477404]: Transform failed: Lookup would require extrapolation 0.305926323s into the future.  Requested time 1773651753.478022814 but the latest data is at time 1773651753.172096491, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773651753.840571007]: Failed to transform scan to global frame
+[WARN] [1773651927.333093346]: Robot pitch angle (19.0 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773651937.239317348]: Robot pitch angle (19.3 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773651946.288669872]: Robot pitch angle (19.6 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773651972.178254024]: Robot pitch angle (-20.5 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773651976.639795579]: Robot pitch angle (-18.4 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652080.868819772]: Robot pitch angle (22.0 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652107.852726259]: Robot pitch angle (-19.2 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[INFO] [1773651629.972751344]: Starting CostMap2D node...
+[INFO] [1773651630.197917321]: CostMap2D initialized with parameters:
+[INFO] [1773651630.197986379]:   Resolution: 0.05 m/pixel
+[INFO] [1773651630.198032173]:   Size: 400 x 400 pixels
+[INFO] [1773651630.198053486]:   Max obstacle range: 10.00 m
+[INFO] [1773651630.198066638]:   Inflation radius: 0.34 m
+[INFO] [1773651630.198081871]:   Pitch detection: ENABLED (max angle: 18.0 degrees, recovery time: 2.0 seconds)
+[INFO] [1773651630.227016696]: Costmap initialized: 400x400 @ 0.05m resolution
+[INFO] [1773651630.227090459]: CostMap2D node initialized successfully
+[INFO] [1773651630.227108668]: Subscribed to: /scan
+[INFO] [1773651630.227121244]: Publishing costmap to: costmap
+[INFO] [1773651630.227135773]: CostMap2D node started successfully
+[INFO] [1773651927.830741055]: Robot pitch angle (18.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651930.034985409]: Robot pitch angle (17.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651932.044407377]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773651937.461688577]: Robot pitch angle (16.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651939.544238989]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773651946.397128934]: Robot pitch angle (17.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651948.421832545]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773651972.290570953]: Robot pitch angle (-17.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651974.005810239]: Robot pitch angle (-17.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651974.232877017]: Robot pitch angle (-13.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651976.302765236]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773651977.328602124]: Robot pitch angle (-17.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651982.438042536]: Robot pitch angle (-16.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651985.436381866]: Robot pitch angle (-16.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651987.942851970]: Robot pitch angle (-17.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651990.222351622]: Robot pitch angle (-14.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773651992.323961326]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652081.158790342]: Robot pitch angle (18.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652082.463112647]: Robot pitch angle (17.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652084.464040351]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652107.960144690]: Robot pitch angle (-16.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652110.053425992]: Robot pitch angle (-16.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652111.351908647]: Robot pitch angle (-18.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652112.742312570]: Robot pitch angle (-17.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652114.390455788]: Robot pitch angle (-16.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652115.136676443]: Robot pitch angle (-18.0 deg) returned to normal, starting[WARN] [1773652185.347995566]: Robot pitch angle (18.7 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652203.756812474]: Robot pitch angle (-20.4 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652220.528623435]: Robot pitch angle (-19.8 deg) exceeds threshold (18.0 deg), activating costmap clearing mode

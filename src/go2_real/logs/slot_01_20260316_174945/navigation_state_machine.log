@@ -1,0 +1,51 @@
+[ERROR] [1773654638.196688898]: 任务 二教学楼巡检任务 中的目标点ID 2 在目标点文件中不存在
+[ERROR] [1773654638.196725187]: 任务 二教学楼巡检任务 中的目标点ID 3 在目标点文件中不存在
+[ERROR] [1773654638.196738020]: 任务 二教学楼巡检任务 中的目标点ID 4 在目标点文件中不存在
+[ERROR] [1773654638.196746340]: 任务 二教学楼巡检任务 中的目标点ID 5 在目标点文件中不存在
+[ERROR] [1773654638.196754212]: 任务 二教学楼巡检任务 中的目标点ID 6 在目标点文件中不存在
+[ERROR] [1773654638.196762373]: 任务 二教学楼巡检任务 中的目标点ID 7 在目标点文件中不存在
+[ERROR] [1773654638.196770949]: 任务 二教学楼巡检任务 中的目标点ID 8 在目标点文件中不存在
+[ERROR] [1773654638.196779205]: 任务 二教学楼巡检任务 中的目标点ID 9 在目标点文件中不存在
+[ERROR] [1773654638.196792614]: 任务列表校验失败，请检查任务列表中的目标点ID
+[ERROR] [1773654638.196803654]: 任务列表校验失败
+[ERROR] [1773654638.196818951]: 导航任务状态机初始化失败
+[INFO] [1773654638.150150749]: 启动导航任务状态机节点
+[INFO] [1773654638.154426687]: NavigationTaskStateMachine 构造函数
+[INFO] [1773654638.163063047]: 任务文件夹路径: /root/ws_nav/src/go2_real/common/user_interface/config/task
+[INFO] [1773654638.163111497]: 目标点文件: /root/ws_nav/src/go2_real/common/user_interface/config/generated_map_target_points.txt
+[INFO] [1773654638.163131913]: 状态机频率: 10.0 Hz
+[INFO] [1773654638.196450009]: 成功加载任务文件: 二教学楼巡检任务 (10 个任务)
+[INFO] [1773654638.196511355]: 成功加载 1 个任务文件
+[INFO] [1773654638.196670625]: 成功加载 2 个目标点
+[INFO] [1773654638.196830727]: NavigationTaskStateMachine 析构函数
+WARNING: disk usage in log directory [/root/.ros/log] is over 1GB.
+It's recommended that you use the 'rosclean' command.
+[navigation_task_state_machine_node-1] process has died [pid 3511, exit code 255, cmd /root/ws_nav/devel/lib/user_interface/navigation_task_state_machine_node __name:=navigation_task_state_machine_node __log:=/root/.ros/log/307ce9e8-1dd2-11b2-a065-3c6d66b29e23/navigation_task_state_machine_node-1.log].
+log file: /root/.ros/log/307ce9e8-1dd2-11b2-a065-3c6d66b29e23/navigation_task_state_machine_node-1*.log
+... logging to /root/.ros/log/307ce9e8-1dd2-11b2-a065-3c6d66b29e23/roslaunch-robot-9004-3401.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+
+started roslaunch server http://robot-9004:41985/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /navigation_task_state_machine_node/state_machine_frequency: 10.0
+ * /navigation_task_state_machine_node/target_points_file: /root/ws_nav/src/...
+ * /navigation_task_state_machine_node/task_folder_path: /root/ws_nav/src/...
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+
+NODES
+  /
+    navigation_task_state_machine_node (user_interface/navigation_task_state_machine_node)
+
+ROS_MASTER_URI=http://localhost:11311
+
+process[navigation_task_state_machine_node-1]: started with pid [3511]
+all processes on machine have died, roslaunch will exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done

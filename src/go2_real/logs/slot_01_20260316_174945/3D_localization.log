@@ -1,0 +1,230 @@
+start spin
+[INFO] [1773654628.654472125]: pose baselink2odom:
+x: 0.000000, y: 0.000000, z: 0.000000, qx: 0.000000,                             qy: 0.000000, qz: 0.000000, qw: 1.000000
+0 0 0 0 0 0 
+Multi thread started 
+p_pre->lidar_type 1
+~~~~/root/ws_nav/src/go2_real/navigation_3d/fast_lio_nav/FAST_LIO_NAV/ file opened
+Authorization required, but no authorization protocol specified
+qt.qpa.xcb: could not connect to display :0
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+[WARN] [1773654629.517946534]: No point, skip this scan!
+
+[ERROR] [1773654631.068763008]: Client [/costmap_2d_node_my] wants topic /scan to have datatype/md5sum [sensor_msgs/LaserScan/90c7ef2dc6895d81024acba2ac42f369], but our version has [sensor_msgs/PointCloud2/1158d486dd51d683ce2f1be655c3c181]. Dropping connection.
+mat_imulink2baselink_:
+    1     0     0 0.119
+    0     1     0     0
+    0     0     1     0
+    0     0     0     1
+[WARN] [1773654670.839040753]: initialize finished
+[INFO] [1773654670.839291901]: wait for Odometry_loc
+[INFO] [1773654670.924577664]: wait for cloud_registered_1
+[Open3D INFO] before sample, target size: 762222, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49428, has normal: false
+[Open3D INFO] source size: 49428, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: scale i: 2 voxel_size: 0.4
+0.6
+[Open3D INFO] eva fitness: 0.278203
+[INFO] [1773654676.466197272]: localization cost: 5437.790000 ms
+[Open3D INFO] before sample, target size: 762357, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49775, has normal: false
+[Open3D INFO] source size: 49775, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.308850
+[INFO] [1773654681.872329997]: localization cost: 5405.953000 ms
+[Open3D INFO] before sample, target size: 763563, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49540, has normal: false
+[Open3D INFO] source size: 49540, has normal: false
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+scale i: 0 voxel_size: 0.1
+[Open3D INFO] eva fitness: 0.320327
+[INFO] [1773654686.445503083]: localization cost: 4573.059000 ms
+[Open3D INFO] before sample, target size: 799108, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49624, has normal: false
+[Open3D INFO] source size: 49624, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: scale i: 2 voxel_size: 0.60.4
+
+[Open3D INFO] eva fitness: 0.285991
+[INFO] [1773654691.300556317]: localization cost: 4854.951000 ms
+[Open3D INFO] before sample, target size: 782943, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49395, has normal: false
+[Open3D INFO] source size: 49395, has normal: false
+scale i: 0 voxel_size: scale i: 1 voxel_size: 0.4
+0.1
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.354975
+[INFO] [1773654696.086767401]: localization cost: 4786.015000 ms
+[Open3D INFO] before sample, target size: 788119, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49766, has normal: false
+[Open3D INFO] source size: 49766, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.339509
+[INFO] [1773654701.069499651]: localization cost: 4982.328000 ms
+[Open3D INFO] before sample, target size: 764052, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49416, has normal: false
+[Open3D INFO] source size: 49416, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.340234
+[INFO] [1773654706.620815505]: localization cost: 5551.184000 ms
+[Open3D INFO] before sample, target size: 781646, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49810, has normal: false
+[Open3D INFO] source size: 49810, has normal: false
+scale i: 0 voxel_size: scale i: 1 voxel_size: 0.10.4
+
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.338747
+[INFO] [1773654712.024827203]: localization cost: 5403.875000 ms
+[Open3D INFO] before sample, target size: 785474, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49951, has normal: false
+[Open3D INFO] source size: 49951, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 2 voxel_size: 0.6
+scale i: 1 voxel_size: 0.4
+[Open3D INFO] eva fitness: 0.343196
+[INFO] [1773654717.828172011]: localization cost: 5803.209000 ms
+[Open3D INFO] before sample, target size: 787375, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49858, has normal: false
+[Open3D INFO] source size: 49858, has normal: false
+scale i: 0 voxel_size: scale i: 1 voxel_size: 0.10.4
+
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.343917
+[INFO] [1773654723.249134093]: localization cost: 5420.840000 ms
+[Open3D INFO] before sample, target size: 787222, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49629, has normal: false
+[Open3D INFO] source size: 49629, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.358782
+[INFO] [1773654728.933079659]: localization cost: 5683.521000 ms
+[Open3D INFO] before sample, target size: 784697, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49595, has normal: false
+[Open3D INFO] source size: 49595, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.357476
+[INFO] [1773654734.274914394]: localization cost: 5341.653000 ms
+[Open3D INFO] before sample, target size: 799988, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49641, has normal: false
+[Open3D INFO] source size: 49641, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 2 voxel_size: scale i: 0.6
+1 voxel_size: 0.4
+[Open3D INFO] eva fitness: 0.358353
+[INFO] [1773654739.233229952]: localization cost: 4958.197000 ms
+[Open3D INFO] before sample, target size: 799657, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49699, has normal: false
+[Open3D INFO] source size: 49699, has normal: false
+scale i: 0 voxel_size: scale i: 1 voxel_size: 0.40.1
+
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.355641
+[INFO] [1773654744.163990828]: localization cost: 4930.611000 ms
+[Open3D INFO] before sample, target size: 797167, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49366, has normal: false
+[Open3D INFO] source size: 49366, has normal: false
+scale i: 0 voxel_size: scale i: 1 voxel_size: 0.10.4
+
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.352368
+[INFO] [1773654749.002662444]: localization cost: 4838.489000 ms
+[Open3D INFO] before sample, target size: 797748, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49616, has normal: false
+[Open3D INFO] source size: 49616, has normal: false
+scale i: 1 voxel_size: 0.4
+scale i: 0 voxel_size: 0.1
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.360368
+[INFO] [1773654754.684960738]: localization cost: 5682.168000 ms
+[Open3D INFO] before sample, target size: 795695, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49659, has normal: false
+[Open3D INFO] source size: 49659, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.35625
+[INFO] [1773654760.476771596]: localization cost: 5791.702000 ms
+[Open3D INFO] before sample, target size: 795230, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49804, has normal: false
+[Open3D INFO] source size: 49804, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: scale i: 2 voxel_size: 0.4
+0.6
+[Open3D INFO] eva fitness: 0.350996
+[INFO] [1773654765.651221866]: localization cost: 5174.343000 ms
+[Open3D INFO] before sample, target size: 793670, has normal: true
+[Open3D INFO] after sample, target size: 399999, has normal: true
+[Open3D INFO] source size: 49686, has normal: false
+[Open3D INFO] source size: 49686, has normal: false
+scale i: 0 voxel_size: scale i: 1 voxel_size: 0.40.1
+
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.356197
+[INFO] [1773654770.645781443]: localization cost: 4994.438000 ms
+[Open3D INFO] before sample, target size: 795128, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49690, has normal: false
+[Open3D INFO] source size: 49690, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: 0.4
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.357275
+[INFO] [1773654776.253729065]: localization cost: 5607.818000 ms
+[Open3D INFO] before sample, target size: 798414, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49633, has normal: false
+[Open3D INFO] source size: 49633, has normal: false
+scale i: 0 voxel_size: scale i: 1 voxel_size: 0.10.4
+
+scale i: 2 voxel_size: 0.6
+[Open3D INFO] eva fitness: 0.36238
+[INFO] [1773654781.155401358]: localization cost: 4901.550000 ms
+[Open3D INFO] before sample, target size: 796343, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49644, has normal: false
+[Open3D INFO] source size: 49644, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: scale i: 2 voxel_size: 0.4
+0.6
+[Open3D INFO] eva fitness: 0.353517
+[INFO] [1773654786.322506912]: localization cost: 5166.980000 ms
+[Open3D INFO] before sample, target size: 797098, has normal: true
+[Open3D INFO] after sample, target size: 400000, has normal: true
+[Open3D INFO] source size: 49543, has normal: false
+[Open3D INFO] source size: 49543, has normal: false
+scale i: 0 voxel_size: 0.1
+scale i: 1 voxel_size: scale i: 2 voxel_size: 0.40.6
+

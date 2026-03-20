@@ -1,0 +1,88 @@
+#!/bin/bash
+set -e
+
+export DISPLAY=:0
+
+PID_SLAM=""
+PID_PGO=""
+PID_IMU=""
+PID_TOPO=""
+
+stop_node() {
+	local name="$1"
+	local pid="$2"
+	local grace="${3:-5}"
+
+	if [ -z "$pid" ] || ! kill -0 "$pid" >/dev/null 2>&1; then
+		return
+	fi
+
+	echo "Stopping ${name} (PID=${pid})..."
+	kill -SIGINT "$pid"
+
+	for _ in $(seq 1 "$grace"); do
+		if ! kill -0 "$pid" >/dev/null 2>&1; then
+			echo "${name} stopped cleanly."
+			return
+		fi
+		sleep 1
+	done
+
+	echo "${name} did not exit in ${grace}s, forcing shutdown..."
+	kill -SIGTERM "$pid"
+}
+
+cleanup() {
+	echo "正在关闭所有节点..."
+	stop_node "PGO" "$PID_PGO" 25
+	stop_node "Topology Generator" "$PID_TOPO" 5
+	stop_node "IMU Filter" "$PID_IMU" 5
+	stop_node "Drive" "$PID_SLAM" 5
+}
+
+trap cleanup INT TERM EXIT
+
+# 自动 source 环境（省得你手动敲）
+source /root/ws_nav/devel/setup.bash
+
+echo "[START] Fast-LIO2 System"
+
+# 0. 启动SLAM (后台)
+echo "Starting drive..."
+roslaunch go2_ros_control common_robot_slam.launch > /dev/null 2>&1 &
+PID_SLAM=$!
+sleep 2
+
+# 1. 启动SLAM (后台)
+echo "Starting Fast-LIO..."
+roslaunch fast_lio_slam mapping_mid360.launch > /dev/null 2>&1 &
+PID_SLAM=$!
+sleep 2
+
+# 2. 启动 PGO (后台)
+echo "Starting PGO..."
+roslaunch pgo pgo.launch > /dev/null 2>&1 &
+PID_PGO=$!
+sleep 1
+
+# 3. 启动 IMU Filter (后台)
+echo "Starting IMU Filter..."
+roslaunch imu_filter_madgwick imu_filter_madgwick.launch > /dev/null 2>&1 &
+PID_IMU=$!
+sleep 1
+
+# 4. 启动 拓扑地图 (后台)
+echo "Starting Topology Generator..."
+roslaunch topology_map_generator topology_map_generator.launch > /dev/null 2>&1 &
+PID_TOPO=$!
+sleep 1
+
+echo "所有后台节点已启动！"
+echo "正在启动键盘控制..."
+echo "-----------------------------------"
+
+# 5. 启动键盘控制 (前台运行，让你能按键)
+rosrun user_interface common_keyboard_node
+
+# 清理由 trap 负责
+exit 0

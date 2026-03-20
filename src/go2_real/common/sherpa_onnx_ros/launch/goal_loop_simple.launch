@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 简化版launch文件，仅启动goal_loop_node用于测试 -->
+    
+    <!-- 启动goal_loop_node节点 -->
+    <node pkg="sherpa_onnx_ros" type="goal_loop_node" name="goal_loop_node" output="screen">
+        <!-- 关键节点地图文件路径 - 请根据实际路径修改 -->
+        <param name="key_nodes_file_path" value="$(find topology_rviz_plugin)/map/key_nodes_map.txt" />
+        
+        <!-- 地图坐标系 -->
+        <param name="map_frame" value="map" />
+        
+        <!-- 目标点到达判定阈值（单位：米） -->
+        <param name="goal_reached_threshold" value="0.5" />
+        
+        <!-- 话题重映射 -->
+        <remap from="/keywords_command" to="/keywords_command" />
+        <remap from="/robot_odom" to="/baselink2map_kalman" />
+        <remap from="/clicked_point" to="/clicked_point" />
+    </node>
+
+</launch>

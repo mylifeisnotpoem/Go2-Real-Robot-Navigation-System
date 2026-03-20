@@ -1,0 +1,21 @@
+<!-- ComplementaryFilter launch file -->
+<launch>
+  <!-- Static TF from laser_link to ilivox_frame -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="laser_to_ilivox_tf"
+        args="0 0 0 0 0 0 laser_link livox_frame" />
+
+  <node
+    pkg="nodelet" type="nodelet" name="imu_manager"
+    args="manager" output="screen" /> #### Complementary filter <node pkg="imu_complementary_filter"
+    type="complementary_filter_node"
+    name="complementary_filter_gain_node" output="screen">
+    <param name="do_bias_estimation" value="true" />
+    <param name="do_adaptive_gain" value="true" />
+    <param name="use_mag" value="false" />
+    <param name="gain_acc" value="0.01" />
+    <param name="gain_mag" value="0.01" />
+    <remap from="/imu/data_raw" to="/livox/imu" />
+  </node>
+
+
+</launch>
