@@ -1,0 +1,35 @@
+#!/bin/bash
+set -e
+export DISPLAY=:0
+echo "[START] Fast-LIO2 Map Tools"
+
+PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+WORKSPACE_DIR="$( cd "${PROJECT_DIR}/../.." && pwd )"
+
+source "${WORKSPACE_DIR}/devel/setup.bash"
+
+copy_map() {
+	local src="$1"
+	local dest="$2"
+	echo "Copying $(basename "$src") -> $(dirname "$dest")"
+	mkdir -p "$(dirname "$dest")"
+	cp "$src" "$dest"
+}
+
+copy_map "${PROJECT_DIR}/slam_3d/PGO/PCD/aft_pgo_cloud.pcd" \
+		  "${PROJECT_DIR}/navigation_3d/fast_lio_nav/open3d_loc/map/aft_pgo_cloud.pcd"
+
+copy_map "${PROJECT_DIR}/slam_3d/PGO/PCD/aft_pgo_free_space.pcd" \
+		  "${PROJECT_DIR}/navigation_3d/global_planner/pcd_map/pcd/aft_pgo_free_space.pcd"
+
+copy_map "${PROJECT_DIR}/navigation_3d/global_planner/topology_rviz_plugin/map/generated_map_target_points.txt" \
+		  "${PROJECT_DIR}/common/user_interface/config/generated_map_target_points.txt"
+
+echo "Processing topology graph..."
+cd "${PROJECT_DIR}/navigation_3d/global_planner/topology_rviz_plugin/scripts"
+python3 topology_connect.py --threshold 0.8 --stats
+cd - > /dev/null
+
+echo "拓扑图处理完成。"
+echo "Launching topology editor (foreground)..."
+roslaunch topology_rviz_plugin topology_tool_demo.launch

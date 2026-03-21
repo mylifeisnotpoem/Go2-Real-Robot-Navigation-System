@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- <include file="$(find livox2pointcloud)/launch/livox2pointcloud.launch" /> -->
+
+  <!-- 加载机器人描述 -->
+  <param name="robot_description" textfile="$(find go2_ros_control)/urdf/go2w_description.urdf" />
+
+  <!-- 启动 robot_state_publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+    <param name="publish_frequency" type="double" value="10.0" />
+  </node>
+
+
+
+
+  <!-- 启动 RViz -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find go2_ros_control)/config/go2.rviz" /> -->
+</launch> 

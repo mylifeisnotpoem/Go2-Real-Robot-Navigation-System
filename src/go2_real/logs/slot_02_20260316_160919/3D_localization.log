@@ -1,0 +1,22 @@
+start spin
+[INFO] [1773648604.888371840]: pose baselink2odom:
+x: 0.000000, y: 0.000000, z: 0.000000, qx: 0.000000,                             qy: 0.000000, qz: 0.000000, qw: 1.000000
+0 0 0 0 0 0 
+Multi thread started 
+p_pre->lidar_type 1
+~~~~/root/ws_nav/src/go2_real/navigation_3d/fast_lio_nav/FAST_LIO_NAV/ file opened
+[WARN] [1773648605.772704724]: No point, skip this scan!
+
+Authorization required, but no authorization protocol specified
+qt.qpa.xcb: could not connect to display :0
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+mat_imulink2baselink_:
+    1     0     0 0.119
+    0     1     0     0
+    0     0     1     0
+    0     0     0     1
+[WARN] [1773648649.183585577]: initialize finished

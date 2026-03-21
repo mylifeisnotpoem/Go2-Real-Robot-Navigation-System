@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import rospy
+import socket
+import json
+from geometry_msgs.msg import Twist
+
+# ================= 配置区域 =================
+# 目标 IP (接收端的 IP 地址)
+# 如果是发给宿主机，通常是宿主机的局域网 IP (如 192.168.1.x) 
+# 或者 Docker 网桥网关 (如 172.17.0.1)
+TARGET_IP = "127.0.0.1" 
+
+# 目标端口 (接收端监听的端口)
+TARGET_PORT = 5005
+# ===========================================
+
+def cmd_vel_callback(msg):
+    """
+    回调函数：收到 ROS /cmd_vel 消息时触发
+    """
+    try:
+        # 1. 提取核心数据 (线速度 x, 角速度 z)
+        # 我们只取这两个，因为对于大多数移动机器人足够了
+        data_payload = {
+            "v": round(msg.linear.x, 3),  # 保留3位小数
+            "w": round(msg.angular.z, 3)
+        }
+
+        # 2. 序列化：转成 JSON 字符串，再转成字节流
+        # 格式示例: {"v": 0.5, "w": 0.1}
+        message = json.dumps(data_payload).encode('utf-8')
+
+        # 3. 通过 UDP 发送
+        sock.sendto(message, (TARGET_IP, TARGET_PORT))
+        
+        # 可选：打印日志方便调试
+        # rospy.loginfo(f"Sent UDP: {data_payload}")
+
+    except Exception as e:
+        rospy.logerr(f"UDP Send Error: {e}")
+
+if __name__ == '__main__':
+    # 初始化 socket (UDP 模式)
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    
+    # 初始化 ROS 节点
+    rospy.init_node('cmd_vel_to_udp_sender', anonymous=True)
+    
+    # 订阅 /cmd_vel 话题
+    rospy.Subscriber("/cmd_vel", Twist, cmd_vel_callback, queue_size=1)
+    
+    rospy.loginfo(f"UDP Bridge Started. Targeting {TARGET_IP}:{TARGET_PORT}")
+    
+    # 保持节点运行
+    rospy.spin()
+    
+    # 关闭 socket
+    sock.close()

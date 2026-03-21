@@ -1,0 +1,3 @@
+1773648561.055999 [0] go2_vel_co: eth0: does not match an available interface.
+[INFO] [1773648561.051513215]: Use network interface: eth0
+[INFO] [1773648561.052691754]: Initializing Channel Factory...

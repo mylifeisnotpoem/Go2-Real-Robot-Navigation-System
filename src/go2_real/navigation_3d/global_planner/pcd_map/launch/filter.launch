@@ -1,0 +1,30 @@
+<launch>
+  <node pkg="pcd_map" name="pcd_filter" type="pcd_filter" output="screen">
+    <!-- 存放pcd文件的路径 -->
+    <param name="file_directory" value= "pcd_map/pcd" />
+    <!-- pcd文件名称 -->
+    <param name="file_name" value= "P1_P2_free" />
+    
+    <!-- 半径滤波参数 -->
+    <!-- 是否使用半径滤波 -->
+    <param name="use_radius_filter" value= "true" />
+    <!-- 半径滤波的半径 -->
+    <param name="thre_radius" value= "0.1" />
+    <!-- 半径滤波的要求点数个数 -->
+    <param name="thres_point_count" value= "5" />
+    
+    <!-- 统计滤波参数 (可选) -->
+    <!-- 是否使用统计滤波 -->
+    <param name="use_statistical_filter" value= "false" />
+    <!-- 统计滤波的临近点数量 -->
+    <param name="stat_mean_k" value= "50" />
+    <!-- 统计滤波的标准差阈值 -->
+    <param name="stat_std_dev" value= "1.0" />
+    
+    <!-- 体素滤波参数 (可选) -->
+    <!-- 是否使用体素滤波 -->
+    <param name="use_voxel_filter" value= "false" />
+    <!-- 体素大小 -->
+    <param name="voxel_leaf_size" value= "0.1" />
+  </node>
+</launch>

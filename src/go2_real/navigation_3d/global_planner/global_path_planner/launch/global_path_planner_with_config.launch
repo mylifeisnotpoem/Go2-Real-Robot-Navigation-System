@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 全局路径规划器节点 -->
+    <node name="global_path_planner" pkg="global_path_planner" type="global_path_planner_node" output="screen">
+        <!-- 加载参数文件 -->
+        <rosparam file="$(find global_path_planner)/config/global_path_planner_params.yaml" command="load" />
+        
+        <!-- 可以在这里覆盖特定参数 -->
+        <!-- <param name="enable_temp_connection_feasibility_check" value="true" /> -->
+    </node>
+    
+    <!-- 示例：在复杂环境中启用严格检查的配置 -->
+    <!-- 
+    <node name="global_path_planner_strict" pkg="global_path_planner" type="global_path_planner_node" output="screen">
+        <rosparam file="$(find global_path_planner)/config/global_path_planner_params.yaml" command="load" />
+        <param name="enable_temp_connection_feasibility_check" value="true" />
+        <param name="valid_point_threshold" value="0.95" />
+        <param name="safety_sphere_radius" value="0.4" />
+    </node>
+    -->
+    
+    <!-- 示例：在开放环境中使用灵活配置 -->
+    <!-- 
+    <node name="global_path_planner_flexible" pkg="global_path_planner" type="global_path_planner_node" output="screen">
+        <rosparam file="$(find global_path_planner)/config/global_path_planner_params.yaml" command="load" />
+        <param name="enable_temp_connection_feasibility_check" value="false" />
+        <param name="direct_connection_threshold" value="5.0" />
+        <param name="connection_distance_threshold" value="8.0" />
+    </node>
+    -->
+</launch>

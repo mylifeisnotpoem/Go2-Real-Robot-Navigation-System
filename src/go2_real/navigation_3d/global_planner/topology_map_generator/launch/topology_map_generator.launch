@@ -1,0 +1,26 @@
+<!-- 拓扑地图生成器启动文件 -->
+<launch>
+  <!-- 参数配置 -->
+  <arg name="node_interval" default="10" doc="每隔多少个路径点生成一个拓扑节点" />
+  <arg name="output_file" default="$(find topology_rviz_plugin)/map/generated_map.txt"
+    doc="输出地图文件路径" />
+  <arg name="path_topic" default="/pgo/optimized_path" doc="输入路径话题名称" />
+  <arg name="edge_type" default="auto" doc="边的类型标签" />
+  <arg name="auto_bidirectional" default="true" doc="是否自动设置边为双向" />
+
+  <!-- 创建输出目录 -->
+  <!-- <param name="create_map_dir" command="mkdir -p $(find topology_map_generator)/map" /> -->
+
+  <!-- 启动拓扑地图生成 -->
+  <node pkg="topology_map_generator"
+    type="topology_map_generator_node"
+    name="topology_map_generator"
+    output="screen">
+
+    <param name="node_interval" value="$(arg node_interval)" />
+    <param name="output_file" value="$(arg output_file)" />
+    <param name="path_topic" value="$(arg path_topic)" />
+    <param name="edge_type" value="$(arg edge_type)" />
+    <param name="auto_bidirectional" value="$(arg auto_bidirectional)" />
+  </node>
+</launch>

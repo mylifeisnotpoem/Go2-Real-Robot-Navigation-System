@@ -1,0 +1,215 @@
+[WARN] [1773652427.852533023]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.001399517s into the future.  Requested time 1773652427.597449541 but the latest data is at time 1773652427.596050024, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773652427.952927263]: Transform failed: Lookup would require extrapolation 0.001399517s into the future.  Requested time 1773652427.597449541 but the latest data is at time 1773652427.596050024, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773652427.953020483]: Failed to transform scan to global frame
+[WARN] [1773652452.121338227]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.000795365s into the future.  Requested time 1773652451.798352957 but the latest data is at time 1773652451.797557592, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773652455.457031663]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.000691414s into the future.  Requested time 1773652455.197913647 but the latest data is at time 1773652455.197222233, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773652457.831335577]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.099570036s into the future.  Requested time 1773652457.497621536 but the latest data is at time 1773652457.398051500, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773652477.081673991]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.104510784s into the future.  Requested time 1773652476.698480368 but the latest data is at time 1773652476.593969584, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773652477.182085308]: Transform failed: Lookup would require extrapolation 0.000740767s into the future.  Requested time 1773652476.698480368 but the latest data is at time 1773652476.697739601, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773652477.182197998]: Failed to transform scan to global frame
+[WARN] [1773652500.553120949]: Robot pitch angle (18.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652516.109165272]: Robot pitch angle (18.2 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652533.203161620]: Robot pitch angle (-19.9 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652540.789645863]: Robot pitch angle (-20.4 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652583.159949865]: Robot pitch angle (18.2 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652601.067760876]: Robot pitch angle (-19.6 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652605.812406681]: Robot pitch angle (-19.2 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[INFO] [1773652419.371602113]: Starting CostMap2D node...
+[INFO] [1773652419.500826054]: CostMap2D initialized with parameters:
+[INFO] [1773652419.500884488]:   Resolution: 0.05 m/pixel
+[INFO] [1773652419.500898952]:   Size: 400 x 400 pixels
+[INFO] [1773652419.500911849]:   Max obstacle range: 10.00 m
+[INFO] [1773652419.500928938]:   Inflation radius: 0.34 m
+[INFO] [1773652419.500944010]:   Pitch detection: ENABLED (max angle: 18.0 degrees, recovery time: 2.0 seconds)
+[INFO] [1773652419.511291379]: Costmap initialized: 400x400 @ 0.05m resolution
+[INFO] [1773652419.511558301]: CostMap2D node initialized successfully
+[INFO] [1773652419.511603006]: Subscribed to: /scan
+[INFO] [1773652419.511629535]: Publishing costmap to: costmap
+[INFO] [1773652419.511652864]: CostMap2D node started successfully
+[INFO] [1773652508.259249478]: Robot pitch angle (14.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652510.289477621]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652516.236435127]: Robot pitch angle (17.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652518.287493338]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652533.777065668]: Robot pitch angle (-16.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652535.591119091]: Robot pitch angle (-17.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652537.600425262]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652540.884052221]: Robot pitch angle (-16.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652541.507938893]: Robot pitch angle (-17.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652541.895873179]: Robot pitch angle (-16.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652544.921520975]: Robot pitch angle (-17.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652547.166588809]: Robot pitch angle (-17.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652548.064938315]: Robot pitch angle (-13.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652551.859724245]: Robot pitch angle (-11.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652553.940139949]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652583.265457406]: Robot pitch angle (15.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652585.427391721]: Robot pitch angle (16.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652586.673930097]: Robot pitch angle (17.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652587.682350641]: Robot pitch angle (17.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652589.792677243]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652601.490606419]: Robot pitch angle (-9.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652602.702155533]: Robot pitch angle (-14.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652603.464918301]: Robot pitch angle (-16.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652605.501613050]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652606.389485045]: Robot pitch angle (-16.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652607.172540299]: Robot pitch angle (-17.1 deg) returned to normal, starting [WARN] [1773652632.560891338]: Robot pitch angle (18.4 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652635.358405278]: Robot pitch angle (18.2 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652643.685515145]: Robot pitch angle (19.3 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652655.976127976]: Robot pitch angle (-18.4 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652661.361950216]: Robot pitch angle (-19.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652675.452000464]: Robot pitch angle (-20.9 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652701.995184861]: Robot pitch angle (18.2 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652706.574764297]: Robot pitch angle (18.7 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+recovery timer (2.0 seconds)
+[INFO] [1773652607.364666799]: Robot pitch angle (-17.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652608.665671800]: Robot pitch angle (-13.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652609.980427988]: Robot pitch angle (-17.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652612.060517338]: Robot pitch angle (-15.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652614.344416873]: Robot pitch angle (-17.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652615.049178634]: Robot pitch angle (-14.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652617.130218885]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652632.658778875]: Robot pitch angle (13.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652634.658978661]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652635.458737723]: Robot pitch angle (17.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652637.523418893]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652643.787776527]: Robot pitch angle (15.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652645.875311268]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652656.362024689]: Robot pitch angle (-15.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652658.065630663]: Robot pitch angle (-17.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652660.162728807]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652661.561764193]: Robot pitch angle (-16.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652662.077395041]: Robot pitch angle (-15.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652663.277546278]: Robot pitch angle (-15.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652664.160908382]: Robot pitch angle (-17.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652667.461894640]: Robot pitch angle (-17.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652668.059798911]: Robot pitch angle (-17.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652669.352324435]: Robot pitch angle (-14.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652669.996006058]: Robot pitch angle (-17.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652670.356903967]: Robot pitch angle (-14.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652673.267485021]: Robot pitch angle (-17.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652675.355571655]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652675.649498033]: Robot pitch angle (-14.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652676.448551948]: Robot pitch angle (-15.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652678.545057205]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652702.065721297]: Robot pitch angle (15.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652704.074181127]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652706.773966867]: Robot pitch angle (17.4 deg) returned to normal, startin[WARN] [1773652711.980856615]: Robot pitch angle (18.3 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652726.042837713]: Robot pitch angle (-19.5 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652793.897961469]: Robot pitch angle (19.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652820.377089319]: Robot pitch angle (-18.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652885.589585297]: Robot pitch angle (18.5 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652888.659350712]: Robot pitch angle (20.8 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+g recovery timer (2.0 seconds)
+[INFO] [1773652708.168779431]: Robot pitch angle (17.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652709.075606101]: Robot pitch angle (17.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652711.168410155]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652712.278575466]: Robot pitch angle (15.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652714.295841698]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652726.486299416]: Robot pitch angle (-16.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652728.193633283]: Robot pitch angle (-15.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652729.746783605]: Robot pitch angle (-17.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652730.253920317]: Robot pitch angle (-17.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652731.862162262]: Robot pitch angle (-17.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652732.373238812]: Robot pitch angle (-15.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652737.372588279]: Robot pitch angle (-12.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652741.564950098]: Robot pitch angle (-16.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652741.962453217]: Robot pitch angle (-16.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652742.745783210]: Robot pitch angle (-13.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652744.748221806]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652794.095430210]: Robot pitch angle (17.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652796.174801093]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652820.485209221]: Robot pitch angle (-14.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652821.005214118]: Robot pitch angle (-14.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652822.053500138]: Robot pitch angle (-14.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652823.226624665]: Robot pitch angle (-14.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652824.737467060]: Robot pitch angle (-12.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652825.668384536]: Robot pitch angle (-14.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652828.679100112]: Robot pitch angle (-15.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652830.152534772]: Robot pitch angle (-13.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652831.451585523]: Robot pitch angle (-13.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652832.240841674]: Robot pitch angle (-17.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652834.246372601]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652885.698181585]: Robot pitch angle (17.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652887.751392159]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652888.965254533]: Robot pitch angle (16.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652891.276063549]: Robot pitch angle (18.0 deg) retur[WARN] [1773652899.969213887]: Robot pitch angle (19.8 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652920.187957897]: Robot pitch angle (-22.8 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652925.124862478]: Robot pitch angle (-18.0 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652936.671971435]: Robot pitch angle (-19.5 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652946.714128853]: Robot pitch angle (-19.4 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652981.671578901]: Robot pitch angle (19.4 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773652986.205481129]: Robot pitch angle (18.8 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+ned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652897.061978157]: Robot pitch angle (18.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652897.461567428]: Robot pitch angle (17.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652899.548347585]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652900.324612705]: Robot pitch angle (15.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652901.407701047]: Robot pitch angle (15.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652902.838837469]: Robot pitch angle (11.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652903.945127701]: Robot pitch angle (5.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652906.013430044]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652920.882103179]: Robot pitch angle (-15.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652921.786789668]: Robot pitch angle (-16.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652922.997185517]: Robot pitch angle (-16.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652925.012131641]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652925.240642116]: Robot pitch angle (-16.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652927.315578001]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652936.766293807]: Robot pitch angle (-14.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652937.069595974]: Robot pitch angle (-17.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652937.269643458]: Robot pitch angle (-17.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652938.364707025]: Robot pitch angle (-16.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652939.581087541]: Robot pitch angle (-17.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652942.652270159]: Robot pitch angle (-15.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652943.673986766]: Robot pitch angle (-17.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652945.674392639]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652946.912507623]: Robot pitch angle (-15.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652947.781420289]: Robot pitch angle (-16.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652948.472702190]: Robot pitch angle (-11.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652949.262968999]: Robot pitch angle (-17.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652951.252049289]: Robot pitch angle (-17.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652951.757194030]: Robot pitch angle (-16.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652952.557039271]: Robot pitch angle (-16.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652954.652501954]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773652981.764509457]: Robot pitch angle (13.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652983.793516674]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652986.403719919]: Robot pitch angle (17.7 d[WARN] [1773652989.300110610]: Robot pitch angle (19.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653010.332885182]: Robot pitch angle (-20.5 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653015.267080899]: Robot pitch angle (-18.3 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653024.659233002]: Robot pitch angle (-20.9 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653063.313015011]: Robot pitch angle (18.5 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653084.514981658]: Robot pitch angle (-23.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653108.958054146]: Robot pitch angle (19.5 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653113.371479008]: Robot pitch angle (19.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+eg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652988.429962784]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773652989.550031003]: Robot pitch angle (16.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773652991.619392773]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773653010.584937714]: Robot pitch angle (-17.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653011.575949834]: Robot pitch angle (-15.0 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653013.584932579]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773653015.464781206]: Robot pitch angle (-17.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653016.163957493]: Robot pitch angle (-16.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653016.660124040]: Robot pitch angle (-15.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653018.356688861]: Robot pitch angle (-17.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653020.372987163]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773653025.359076588]: Robot pitch angle (-9.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653026.061509545]: Robot pitch angle (-14.4 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653027.351211295]: Robot pitch angle (-13.9 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653028.654559640]: Robot pitch angle (-16.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653029.650556979]: Robot pitch angle (-12.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653031.741376015]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773653063.409570889]: Robot pitch angle (17.7 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653064.141878057]: Robot pitch angle (12.6 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653064.881541475]: Robot pitch angle (16.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653065.651366394]: Robot pitch angle (12.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653066.426726117]: Robot pitch angle (15.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653067.235865693]: Robot pitch angle (5.2 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653067.937986110]: Robot pitch angle (11.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653069.993122473]: Robot pitch angle stable for 2.1 seconds, deactivating costmap clearing mode
+[INFO] [1773653091.882026200]: Robot pitch angle (-17.3 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653095.440478020]: Robot pitch angle (-12.8 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653097.441550939]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773653109.162738850]: Robot pitch angle (15.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653110.250049518]: Robot pitch angle (12.5 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653112.254572425]: Robot pitch angle stable for 2.0 seconds, deactivating costmap clearing mode
+[INFO] [1773653113.659588748]: Robot pitch angle (15.1 deg) returned to normal, starting recovery timer (2.0 seconds)
+[INFO] [1773653115.375298432]: Robot pitch angle (16.3 deg) ret[WARN] [1773653134.102975666]: Robot pitch angle (-21.6 deg) exceeds threshold (18.0 deg), activating costmap clearing mode

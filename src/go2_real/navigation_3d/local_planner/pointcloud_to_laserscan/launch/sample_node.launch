@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- run pointcloud_to_laserscan node -->
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+
+        <remap from="cloud_in" to="/obstacle_cloud"/>
+        <remap from="scan" to="/scan"/>
+        <remap from="cloud_raw" to="/pointcloud_raw"/>
+        <remap from="cloud_filtered" to="/pointcloud_filtered"/>
+        <rosparam>
+            target_frame: base_link    # 输出激光扫描数据的目标坐标系
+            transform_tolerance: 0.01   # TF变换的容差时间(单位:秒)
+            min_height: 0.2            # 最小高度(单位:米)
+            max_height: 1.4            # 最大高度(单位:米)
+
+            angle_min: -3.1416     # 扫描的最小角度(弧度),-1.5708等于-π/2,即-90度
+            angle_max: 3.1416      # 扫描的最大角度(弧度),1.5708等于π/2,即90度
+            angle_increment: 0.0087 # 角度增量(弧度),约等于0.5度(π/360)
+            scan_time: 0.1      # 扫描时间(单位:秒),0.3333秒等于1/3秒
+            range_min: 0.05        # 最小测量距离(单位:米),0.45米
+            range_max: 10.0         # 最大测量距离(单位:米),4.0米
+            use_inf: true          # 是否使用无穷远(True/False)
+            inf_epsilon: 1.0      # 无穷远epsilon值(单位:米),1.0米
+
+            # 密度过滤参数 - 用于过滤楼梯等薄面结构
+            enable_density_filter: True  # 是否启用密度过滤(True/False)
+            min_point_count: 2            # 网格中最少点数才投影到激光扫描
+            density_grid_size: 0.1        # 密度网格大小(单位:米)
+
+            # 并发级别,影响点云处理队列数量和线程数量
+            # 0 : 自动检测核心数
+            # 1 : 单线程
+            # 2->inf : 并行级别
+            concurrency_level: 0
+        </rosparam>
+
+    </node>
+
+</launch>

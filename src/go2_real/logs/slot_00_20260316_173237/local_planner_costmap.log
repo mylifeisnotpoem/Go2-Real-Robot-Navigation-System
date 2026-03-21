@@ -1,0 +1,8 @@
+[WARN] [1773653703.195264501]: Robot pitch angle (-18.0 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653715.252552118]: Sensor position outside costmap bounds
+[WARN] [1773653723.617562547]: Sensor position outside costmap bounds
+[WARN] [1773653728.693986362]: Sensor position outside costmap bounds
+[WARN] [1773653733.819421250]: Sensor position outside costmap bounds
+[WARN] [1773653738.104771165]: Robot pitch angle (-18.6 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773653744.097958137]: Sensor position outside costmap bounds
+[WARN] [1773653744.746098357]: Robot pitch angle (20.9 deg) exceeds threshold (18.0 deg), activating costmap clearing mode

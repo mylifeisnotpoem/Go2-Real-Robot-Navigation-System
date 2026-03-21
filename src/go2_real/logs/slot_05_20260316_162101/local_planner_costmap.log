@@ -1,0 +1,7 @@
+[WARN] [1773649327.144732943]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.000627518s into the future.  Requested time 1773649326.870947361 but the latest data is at time 1773649326.870319843, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773649361.328719245]: Failed to get sensor origin for raytracing: Lookup would require extrapolation 0.095884562s into the future.  Requested time 1773649360.870214224 but the latest data is at time 1773649360.774329662, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773649361.429538451]: Transform failed: Lookup would require extrapolation 0.095884562s into the future.  Requested time 1773649360.870214224 but the latest data is at time 1773649360.774329662, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773649361.429646209]: Failed to transform scan to global frame
+[WARN] [1773649361.631387198]: Transform failed: Lookup would require extrapolation 0.201027870s into the future.  Requested time 1773649361.071340322 but the latest data is at time 1773649360.870312452, when looking up transform from frame [base_link] to frame [map]
+[WARN] [1773649464.076136752]: Robot pitch angle (18.9 deg) exceeds threshold (18.0 deg), activating costmap clearing mode
+[WARN] [1773649483.502959233]: Robot pitch angle (-18.1 deg) exceeds threshold (18.0 deg), activating costmap clearing mode

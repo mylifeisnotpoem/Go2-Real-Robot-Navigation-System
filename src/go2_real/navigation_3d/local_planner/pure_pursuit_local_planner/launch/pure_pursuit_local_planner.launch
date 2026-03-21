@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Pure Pursuit Local Planner Launch File -->
+	<param name="use_sim_time" value="false" />
+    
+    <!-- Arguments -->
+    <arg name="node_name" default="pure_pursuit_local_planner" />
+    <arg name="config_file" default="$(find pure_pursuit_local_planner)/config/pure_pursuit_params.yaml" />
+    <arg name="cmd_vel_topic" default="/cmd_vel" />
+    <arg name="global_path_topic" default="/smoothed_global_path" />
+    <arg name="local_costmap_topic" default="/local_costmap/costmap/costmap" />
+    <arg name="scan_topic" default="/scan" />
+    <arg name="stairs_pointcloud_topic" default="/livox/pointcloud2" />
+    <arg name="rviz_config" default="$(find pure_pursuit_local_planner)/rviz/pure_pursuit.rviz" />
+    <arg name="launch_rviz" default="false" />
+    
+    <!-- Pure Pursuit Local Planner Node -->
+    <node name="$(arg node_name)" pkg="pure_pursuit_local_planner" type="pure_pursuit_local_planner_node" output="screen">
+        <!-- Load parameters from config file -->
+        <rosparam file="$(arg config_file)" command="load" />
+
+        <!-- Override important parameters -->
+        <param name="enable_local_replanning" value="true" />  <!-- 启用A*局部重规划（大障碍物绕行需要）-->
+
+           <!-- 楼梯模式点云检测参数 -->
+           <param name="front_obstacle_detector/stair_detection_range" value="1.2"/>
+           <param name="front_obstacle_detector/stair_detection_width" value="0.8"/>
+           <param name="front_obstacle_detector/stair_detection_height_min" value="0.15"/>
+           <param name="front_obstacle_detector/stair_detection_height_max" value="1.5"/>
+           <param name="front_obstacle_detector/downstairs_detection_range" value="1.5"/>
+           <param name="front_obstacle_detector/downstairs_detection_width" value="0.8"/>
+           <param name="front_obstacle_detector/downstairs_detection_height_min" value="0.05"/>
+           <param name="front_obstacle_detector/downstairs_detection_height_max" value="1.5"/>
+           <param name="front_obstacle_detector/stair_obstacle_point_threshold" value="10"/>
+
+        <!-- Topic remapping -->
+        <remap from="/cmd_vel" to="$(arg cmd_vel_topic)" />
+        <remap from="/global_path" to="$(arg global_path_topic)" />
+        <remap from="/local_costmap" to="$(arg local_costmap_topic)" />
+	<remap from="/scan" to="$(arg scan_topic)" />
+	<remap from="/livox/lidar" to="$(arg stairs_pointcloud_topic)" />
+
+    </node>
+    
+    <!-- Local Path Smoother for A* generated path -->
+    <node name="local_path_smoother" pkg="path_smoother" type="path_smoother_node" output="screen">
+        <!-- 平滑参数 - 针对局部路径优化 -->
+        <param name="global_frame" value="map" />
+        <param name="smoothing_factor" value="0.8" />      <!-- 较小的平滑因子，保持路径形状 -->
+        <param name="smoothing_iterations" value="2" />    <!-- 较少迭代次数，减少延迟 -->
+        <param name="neighbor_radius" value="0.5" />       <!-- 较小的邻域半径 -->
+        <param name="min_point_distance" value="0.2" />    <!-- 较小的点间距 -->
+        <param name="max_deviation" value="0.8" />         <!-- 较小的最大偏离 -->
+        <param name="enable_visualization" value="true" />
+        <param name="enable_point_filtering" value="true" />
+        
+        <!-- 话题重映射 - 平滑A*生成的局部路径 -->
+        <remap from="global_path" to="/pure_pursuit_local_planner/local_path_astar" />
+        <remap from="smoothed_global_path" to="/pure_pursuit_local_planner/smoothed_local_path" />
+        <remap from="path_visualization" to="/local_path_smoothing_visualization" />
+    </node>
+    
+    <!-- Launch RViz if requested -->
+    <node if="$(arg launch_rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" output="screen" />
+    
+</launch>
+

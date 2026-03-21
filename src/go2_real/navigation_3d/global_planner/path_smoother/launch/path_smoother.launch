@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- 路径平滑节点参数 -->
+  <arg name="global_frame" default="map" />
+  <arg name="smoothing_factor" default="1.0" />
+  <arg name="smoothing_iterations" default="3" />
+  <arg name="neighbor_radius" default="1.0" />
+  <arg name="min_point_distance" default="0.5" />
+  <arg name="max_deviation" default="1.5" />
+  <arg name="enable_visualization" default="true" />
+  <arg name="enable_point_filtering" default="true" />
+  
+  <!-- 话题重映射参数 -->
+  <arg name="input_path_topic" default="/global_path" />
+  <arg name="output_path_topic" default="/smoothed_global_path" />
+  <arg name="visualization_topic" default="/path_visualization" />
+
+  <!-- 启动路径平滑节点 -->
+  <node name="path_smoother" pkg="path_smoother" type="path_smoother_node" output="screen">
+    <!-- 参数设置 -->
+    <param name="global_frame" value="$(arg global_frame)" />
+    <param name="smoothing_factor" value="$(arg smoothing_factor)" />
+    <param name="smoothing_iterations" value="$(arg smoothing_iterations)" />
+    <param name="neighbor_radius" value="$(arg neighbor_radius)" />
+    <param name="min_point_distance" value="$(arg min_point_distance)" />
+    <param name="max_deviation" value="$(arg max_deviation)" />
+    <param name="enable_visualization" value="$(arg enable_visualization)" />
+    <param name="enable_point_filtering" value="$(arg enable_point_filtering)" />
+    
+    <!-- 话题重映射 -->
+    <remap from="global_path" to="$(arg input_path_topic)" />
+    <remap from="smoothed_global_path" to="$(arg output_path_topic)" />
+    <remap from="path_visualization" to="$(arg visualization_topic)" />
+  </node>
+
+</launch>

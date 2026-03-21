@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 参数定义 -->
+    <arg name="use_dual_radar" default="false" doc="是否启用双雷达模式"/>
+    <arg name="config_file" default="$(find dual_radar_traversable_extractor)/config/dual_radar_config.yaml"/>
+    
+    <!-- 双雷达可行区域提取器 -->
+    <node name="dual_radar_traversable_extractor" 
+          pkg="dual_radar_traversable_extractor" 
+          type="dual_radar_traversable_extractor_node" 
+          output="screen">
+        
+        <!-- 加载配置参数 -->
+        <rosparam file="$(arg config_file)" command="load"/>
+        
+        <!-- 覆盖双雷达模式参数 -->
+        <param name="use_dual_radar" value="$(arg use_dual_radar)"/>
+        
+        <!-- 可选：覆盖其他特定参数 -->
+        <!-- <param name="lidar_topic" value="/cloud_registered_body_1"/> -->
+        <!-- <param name="radar_topic" value="/radar_points"/> -->
+        <!-- <param name="base_frame" value="base_link"/> -->
+    </node>
+    
+    <!-- 可选：启动rviz进行可视化 -->
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dual_radar_traversable_extractor)/rviz/dual_radar_visualization.rviz"/> -->
+</launch>

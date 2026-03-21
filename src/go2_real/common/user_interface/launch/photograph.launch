@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 拍照节点启动文件 -->
+    
+    <!-- 网络接口参数，默认为eth0，可以通过launch参数覆盖 -->
+    <arg name="network_interface" default="eth0" doc="Network interface for Unitree Go2 communication"/>
+    
+    <!-- 图片保存路径参数，默认为当前目录 -->
+    <arg name="image_save_path" default="$(find user_interface)/images/" doc="Directory to save captured images"/>
+    
+    <!-- 创建图片保存目录（如果不存在） -->
+    <param name="image_save_path" value="$(arg image_save_path)"/>
+    
+    <!-- 启动拍照节点 -->
+    <node 
+        name="photograph_node" 
+        pkg="user_interface" 
+        type="photograph_node" 
+        output="screen"
+        required="true"
+        args="$(arg network_interface)">
+        <!-- 节点参数 -->
+        <param name="image_save_path" value="$(arg image_save_path)"/>
+        <!-- 重映射话题（如果需要） -->
+        <remap from="/task_action" to="/task_action"/>
+    </node>
+
+</launch>

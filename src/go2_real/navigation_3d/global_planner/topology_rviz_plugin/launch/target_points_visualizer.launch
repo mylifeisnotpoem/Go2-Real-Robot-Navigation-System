@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 目标点可视化节点 -->
+    <node pkg="topology_rviz_plugin" type="target_points_visualizer_node" name="target_points_visualizer" output="screen">
+        <!-- 目标点文件路径 -->
+        <param name="target_points_file" value="$(find topology_rviz_plugin)/map/generated_map_target_points.txt" />
+        
+        <!-- 可视化参数 -->
+        <param name="frame_id" value="map" />
+        <param name="arrow_scale" value="1.5" />
+        <param name="text_scale" value="0.8" />
+        <param name="text_height_offset" value="1.0" />
+        <param name="publish_rate" value="1.0" />
+    </node>
+
+    <!-- 可选：启动rviz显示目标点 -->
+    <arg name="rviz" default="false" />
+    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="target_points_rviz" 
+          args="-d $(find topology_rviz_plugin)/rviz/target_points_visualization.rviz" />
+</launch>

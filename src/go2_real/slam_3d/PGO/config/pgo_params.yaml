@@ -1,0 +1,50 @@
+#### PGO参数配置
+# 启用L1
+seg_cloud_en:                   # 确保起码有一个点云源启用  默认只启用lidar点云
+  ground_segmentation_en: true  # 是否启用地面分割
+  radar_en: true                # 是否启用L1 雷达点云 进行可行域分割
+
+  
+pgo_pcd_save:
+  all_pcd_downsample_rate: 0.5
+  free_space_downsample_rate: 0.2
+# 话题配置
+topics:
+  odom_topic: "/Odometry"                   # 里程计话题
+  radar_topic: "/lidar/points"              # L1点云话题
+  point_cloud_topic: "/cloud_registered_body"    # 点云话题
+  optimized_path_topic: "/optimized_path"   # 优化后的路径话题
+  optimized_odom_topic: "/optimized_odom"   # 优化后的里程计话题
+
+parameters:
+  key_frame_distance_thr: 0.5       # 关键帧距离阈值
+  key_frame_angle_thr: 0.1          # 关键帧角度阈值
+
+# 优化器配置
+optimizer:
+  publish_optimized_path: true      # 是否发布优化后的路径
+  optimize_every_n_nodes: 10        # 每接收多少个节点进行一次优化
+  max_iterations: 100               # 优化最大迭代次数
+
+# 回环检测方法
+loop_closure:
+  enable: true
+  method: "scan_matching"          # 回环检测方法  scan_matching, scan_context, std
+  frequency: 2                     # 回环检测频率  单位: Hz (增加频率)
+  downsample_rate: 0.3             # 下采样率 (稍微增加保留更多特征)
+  scan_matching:
+    surrounding_keyframe_size: 60            # 周围关键帧数量 (增加以提高回环检测范围)
+    history_keyframe_search_radius: 3.0     # 历史关键帧搜索半径 (增加搜索范围)
+    history_keyframe_search_difftime: 100.0  # 历史关键帧搜索时间差 (减少时间限制)
+    history_keyframe_search_num: 30          # 历史关键帧搜索数量 (增加候选帧数量)
+    min_score: 0.05                         # 最小匹配分数 (降低阈值，更容易检测回环)
+
+  scan_context:
+    max_distance: 2.0              # 最大距离
+    min_score: 0.3                 # 最小匹配分数
+    max_iterations: 50             # 最大迭代次数
+
+
+# 可行域分割
+free_space_segmentation:
+  enable: true

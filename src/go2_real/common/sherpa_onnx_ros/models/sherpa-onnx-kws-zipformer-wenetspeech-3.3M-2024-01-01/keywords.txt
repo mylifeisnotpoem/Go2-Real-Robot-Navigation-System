@@ -1,0 +1,18 @@
+n ǐ h ǎo x iǎo y ì @你好小益
+d ǎo h áng k āi sh ǐ @导航开始
+d ǎo h áng zh ōng zh ǐ @导航终止
+t íng x ià @停下
+q ián j ìn @前进
+h òu t uì @后退
+z uǒ zh uǎn @左转
+y òu zh uǎn @右转
+h uí j iā @回家
+d ūn x ià @蹲下
+q ǐ l ì @起立
+j ì x ù @继续
+y ī h ào @一号
+èr h ào @二号
+s ān h ào @三号
+s ì h ào @四号
+w ǔ h ào @五号
+l iù h ào @六号
