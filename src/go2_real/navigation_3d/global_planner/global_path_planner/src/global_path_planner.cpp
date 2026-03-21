@@ -21,9 +21,12 @@ namespace global_path_planner
         nh.param<double>("connection_distance_threshold", connection_distance_threshold_, 5.0);
         nh.param<int>("interpolation_points", interpolation_points_, 20);
 
+<<<<<<< HEAD
         // === 新增：从配置文件加载 A* 切换阈值，默认 10.0 米 ===
         nh.param<double>("astar_distance_threshold", astar_distance_threshold_, 10.0);
 
+=======
+>>>>>>> cec3d0ec371a81dd56b606f290c5fd43da59fbc4
         // 可行性检查相关参数
         nh.param<double>("free_space_radius", free_space_radius_, 1.0);
         nh.param<double>("edge_proximity_threshold", edge_proximity_threshold_, 0.8);
